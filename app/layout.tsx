@@ -1,37 +1,96 @@
-import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { Footer } from '@/components/site/footer';
+import Header from '@/components/site/header';
+import { ThemeProvider } from '@/components/theme/theme-provider';
+import { Toaster } from '@/components/ui/sonner';
+import { cn } from '@/lib/utils';
+import { Analytics } from '@vercel/analytics/next';
+import type { Metadata, Viewport } from 'next';
+import dynamic from 'next/dynamic';
+import { Inter } from 'next/font/google';
+import localFont from 'next/font/local';
 
-const inter = Inter({ subsets: ["latin"] });
+import './globals.css';
+
+const inter = Inter({ subsets: ['latin'] });
 
 const defaultUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : "http://localhost:8080";
+    ? `https://${process.env.VERCEL_URL}`
+    : 'http://localhost:8080';
 
 export const viewport: Viewport = {
-  viewportFit: "cover",
-  width: "device-width",
-  initialScale: 1,
-  maximumScale: 1,
+    viewportFit: 'cover',
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(defaultUrl),
-  title: {
-    default: "SAP Hub",
-    template: "%s | SAP Hub",
-  },
-  description: "Super Auto Pets Community",
+    metadataBase: new URL(defaultUrl),
+    title: {
+        default: 'SAP Hub',
+        template: '%s | SAP Hub',
+    },
+    description: 'Super Auto Pets Community',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang='en'>
-      <body className={inter.className}>{children}</body>
-    </html>
-  );
+const SiteBackground = dynamic(() => import('@/components/theme/background'), {
+    ssr: false,
+});
+
+const lapsus = localFont({
+    src: './fonts/Lapsus/LapsusPro.otf',
+    fallback: ['sans-serif', 'system-ui'],
+    variable: '--font-lapsus',
+});
+const komika = localFont({
+    src: [
+        {
+            path: './fonts/Komika/Komika-Regular.ttf',
+            weight: '400',
+        },
+        {
+            path: './fonts/Komika/Komika-Italic.ttf',
+            weight: '400',
+            style: 'italic',
+        },
+        {
+            path: './fonts/Komika/Komika-Bold.ttf',
+            weight: '700',
+        },
+        {
+            path: './fonts/Komika/Komika-Bold-Italic.ttf',
+            weight: '700',
+            style: 'italic',
+        },
+    ],
+    fallback: ['sans-serif', 'system-ui'],
+    variable: '--font-komika',
+});
+
+export default function SiteRootLayout({
+    children,
+    modal,
+}: {
+    children: React.ReactNode;
+    modal: React.ReactNode;
+}) {
+    return (
+        <html
+            lang="en"
+            className={cn(lapsus.variable, komika.variable)}
+            suppressHydrationWarning
+        >
+            <body className="bg-background font-komika text-foreground max-w-full overflow-x-hidden antialiased">
+                <ThemeProvider>
+                    {/* <Header /> */}
+                    {children}
+                    {modal}
+                    {/* <SiteBackground /> */}
+                    {/* <Footer /> */}
+                    {/* <Toaster richColors /> */}
+                    {/* <Analytics /> */}
+                </ThemeProvider>
+            </body>
+        </html>
+    );
 }
