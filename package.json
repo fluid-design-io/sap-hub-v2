@@ -10,8 +10,8 @@
     "dev": "next dev -p 8080 --turbo",
     "build": "next build",
     "start": "next start -p 8080",
-    "postbuild": "pagefind --site .next --output-path .next/static/chunks/app/\\(public\\)/pagefind",
-    "pagefind:local": "bun run build && cp -r .next/static/chunks/app/\\(public\\)/pagefind public/pagefind/",
+    "postbuild": "pagefind --site .next --output-path .next/static/chunks/app/pagefind",
+    "pagefind:local": "bun run build && cp -r .next/static/chunks/app/pagefind public/pagefind/",
     "update-types": "supabase gen types typescript --local > types/database.d.ts",
     "seed": "bun scripts/seed-sap-data.ts",
     "seed:remote": "NODE_ENV=production bun scripts/seed-sap-data.ts"
