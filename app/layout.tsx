@@ -69,10 +69,10 @@ const komika = localFont({
 
 export default function SiteRootLayout({
     children,
-    // modal,
+    modal,
 }: {
     children: React.ReactNode;
-    // modal: React.ReactNode;
+    modal: React.ReactNode;
 }) {
     return (
         <html
@@ -84,7 +84,7 @@ export default function SiteRootLayout({
                 <ThemeProvider>
                     {/* <Header /> */}
                     {children}
-                    {/* {modal} */}
+                    {modal}
                     {/* <SiteBackground /> */}
                     {/* <Footer /> */}
                     {/* <Toaster richColors /> */}
