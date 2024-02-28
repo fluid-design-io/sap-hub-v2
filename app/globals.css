@@ -2,32 +2,157 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@layer base {
+    :root {
+        --brand: 22 84% 55%;
+        --background: 0 0% 100%;
+        --foreground: 20 14.3% 4.1%;
+        --card: 0 0% 100%;
+        --card-foreground: 20 14.3% 4.1%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 20 14.3% 4.1%;
+        --primary: 19 83% 55%;
+        --primary-foreground: 19 9.1% 97.8%;
+        --secondary: 44 95% 50%;
+        --secondary-foreground: 24 9.8% 10%;
+        --muted: 44 95% 50%;
+        --muted-foreground: 25 5.3% 44.7%;
+        --accent: 44 95% 50%;
+        --accent-foreground: 24 9.8% 10%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 60 9.1% 97.8%;
+        --border: 20 5.9% 90%;
+        --input: 20 5.9% 90%;
+        --ring: 19 83% 55%;
+        --radius: 0.5rem;
+    }
+    :root.desert {
+        --background: 25 100% 62%;
+        --accent: 25 100% 80%;
+        --foreground: 25 100% 4.1%;
+        --card-foreground: 25 100% 10%;
+        --header-foreground: 25 100% 4.1%;
+        --muted-foreground: 25 5.3% 32.7%;
+        --primary: 24 83% 55%;
+        --primary-foreground: 25 100% 7.8%;
+        --input: 25 100% 90%;
+        --ring: 24 83% 14%;
+    }
+    :root.field {
+        --background: 50 61% 57%;
+        --accent: 50 61% 80%;
+        --foreground: 50 61% 6%;
+        --card-foreground: 50 61% 20%;
+        --header-foreground: 50 61% 4.1%;
+        --muted-foreground: 50 5.3% 32.7%;
+        --primary: 50 95% 50%;
+        --primary-foreground: 50 9.8% 10%;
+        --input: 50 61% 85%;
+        --ring: 50 95% 14%;
+    }
+    :root.lava-cave {
+        --background: 357 36% 50%;
+        --accent: 357 36% 80%;
+        --foreground: 357 36% 96.3%;
+        --card-foreground: 357 36% 30%;
+        --header-foreground: 357 36% 96.3%;
+        --muted-foreground: 0 60% 84.3%;
+        --primary: 357 36% 50%;
+        --primary-foreground: 357 36% 96.3%;
+        --input: 357 36% 85%;
+        --ring: 357 36% 14%;
+    }
+    :root.lava-mountain {
+        --background: 223 30% 62%;
+        --accent: 223 30% 80%;
+        --foreground: 223 30% 4.3%;
+        --card-foreground: 223 30% 30%;
+        --header-foreground: 223 30% 4.3%;
+        --muted-foreground: 223 30% 36%;
+        --primary: 223 30% 72%;
+        --primary-foreground: 223 30% 11%;
+        --input: 223 30% 85%;
+        --ring: 223 30% 14%;
+    }
+    :root.scary-forest {
+        --background: 217 17% 45%;
+        --accent: 217 17% 80%;
+        --foreground: 217 17% 96.6%;
+        --card-foreground: 217 17% 30%;
+        --header-foreground: 217 17% 8.6%;
+        --muted-foreground: 217 27% 80%;
+        --primary: 217 17% 45%;
+        --primary-foreground: 217 17% 88.6%;
+        --input: 217 17% 85%;
+        --ring: 217 17% 14%;
+    }
+    :root.snow {
+        --background: 182 23% 73%;
+        --accent: 182 23% 80%;
+        --foreground: 182 23% 4.1%;
+        --card-foreground: 182 23% 30%;
+        --header-foreground: 182 23% 4.1%;
+        --muted-foreground: 182 23% 36%;
+        --primary: 182 23% 73%;
+        --primary-foreground: 182 23% 4.1%;
+        --input: 182 23% 85%;
+        --ring: 182 23% 14%;
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@layer base {
+    * {
+        @apply border-border selection:bg-primary selection:text-primary-foreground;
+    }
+    h1.header {
+        @apply font-lapsus;
+        text-shadow:
+            3px 0 0 black,
+            0 3px 0 black,
+            -3px 0 0 black,
+            0 -3px 0 black,
+            4px 0px 0px #fff,
+            4px 4px 0px #fff;
+    }
+
+    /* Scrollbar */
+    .track-shadow {
+        box-shadow:
+            inset 0 0 0px 2.5px black,
+            inset 0 -2px 0px 2.5px black !important;
+    }
+
+    *::-webkit-scrollbar-track {
+        border-radius: 2px;
+        @apply track-shadow bg-gray-300 shadow-black;
+    }
+
+    *::-webkit-scrollbar {
+        width: 18px;
+        @apply bg-gray-300;
+    }
+    *::-webkit-scrollbar-thumb {
+        border-radius: 2px;
+        @apply track-shadow bg-brand;
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+@layer components {
+    .subtitle {
+        @apply text-xl !text-secondary md:text-2xl;
+        text-shadow:
+            1.5px 0 0 black,
+            0 1.5px 0 black,
+            -1.5px 0 0 black,
+            0 -1.5px 0 black,
+            2px 2px 0 #fff;
+    }
+    .text-stroke {
+        -webkit-text-stroke-width: var(--stroke-width, 2px);
+        -webkit-text-stroke-color: var(--stroke-color, black);
+    }
 }
