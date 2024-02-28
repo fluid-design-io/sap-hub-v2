@@ -82,11 +82,11 @@ export default function SiteRootLayout({
         >
             <body className="max-w-full overflow-x-hidden bg-background font-komika text-foreground antialiased">
                 <ThemeProvider>
-                    {/* <Header /> */}
+                    <Header />
                     {children}
                     {modal}
                     {/* <SiteBackground /> */}
-                    {/* <Footer /> */}
+                    <Footer />
                     {/* <Toaster richColors /> */}
                     {/* <Analytics /> */}
                 </ThemeProvider>
