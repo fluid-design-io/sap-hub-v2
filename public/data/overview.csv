@@ -1,0 +1,519 @@
+Name;Tier;Type;Archetype;Roles;Trigger;Effect;Released;Packs;Ownership
+African Wild Dog;1;Pet;;;;No ability.;No;Pack6;Pack6
+Alchemedes;1;Pet;Mana;Enabler;Start of battle; Give the nearest friend ahead +1 mana.;Yes;Pack5;Pack5
+Amami Rabbit;1;Pet;;;;No ability.;No;Pack6;Pack6
+AmazonRiverDolphin;1;Pet;;;;No ability.;No;Pack6;Pack6
+Amsterdam Albatross;1;Pet;;;;No ability.;No;Pack6;Pack6
+Angelshark;1;Pet;;;;No ability.;No;Pack6;Pack6
+Ant;1;Pet;Diva;Tempo;Faint; Give one random friend +1 attack and +1 health.;Yes;Pack1;Pack1
+Ant;1;Pet;;;Faint; Summon one Ant with 1–2 health.;No;Pack7;Pack7
+Araripe Manakin;1;Pet;;;;No ability.;No;Pack6;Pack6
+Axehandle Hound;1;Pet;Standard;Tech;Start of battle; If the enemy has multiple copies, deal 10 damage to one of them.;Yes;Pack5;Pack5
+Aye-Aye;1;Pet;;;;No ability.;No;Pack6;Pack6
+Baku;1;Pet;;;End turn; If turn number is even, replace ailment on one random friend with +1 health.;Yes;Pack5;Pack5
+Banggai Cardinalfish;1;Pet;;;;No ability.;No;Pack6;Pack6
+Barghest;1;Pet;Ailer;Enabler;Start of battle; Make the last perk-less enemy Spooked.;Yes;Pack5;Pack5
+Basilisk;1;Pet;;Tech;Start of battle; Transform the nearest pet ahead to a Rock with +2 health.;Yes;Custom;Pack5
+Bat;1;Pet;;;Start of battle; Deal 1–2 damage to one random enemy.;No;Pack7;Pack7
+Bay Cat;1;Pet;;;;No ability.;No;Pack6;Pack6
+Beaver;1;Pet;Cycler;Enabler;Sell; Give two random friends +1 attack.;Yes;Pack1 Pack2;Pack1 Pack2
+Beetle;1;Pet;Perky;;Start of battle; Gain Honey perk.;Yes;Pack2;Pack2
+Black Rhino;1;Pet;;;;No ability.;No;Pack6;Pack6
+Blue Whale;1;Pet;;;;No ability.;No;Pack6;Pack6
+Bluebird;1;Pet;Standard;Scaler;End turn; Give one random friend +1 attack.;Yes;Pack2;Pack2
+BlueFootedBooby;1;Pet;;;;No ability.;No;Pack6;Pack6
+Blue-Throated Macaw;1;Pet;;;;No ability.;No;Pack6;Pack6
+Bombus Dahlbomii;1;Pet;;;;No ability.;No;Pack6;Pack6
+Bonobo;1;Pet;;;;No ability.;No;Pack6;Pack6
+Bulldog;1;Pet;;;After attack; Set attack equal to health + 1.;Yes;Pack4;Pack4
+Bunyip;1;Pet;Roller;Tempo;Start of battle; Gain +1 health for each time you rolled this turn, up to 3 rolls.;Yes;Pack5;Pack5
+California Condor;1;Pet;;;;No ability.;No;Pack6;Pack6
+Chinchilla;1;Pet;Cycler;;Sell; Summon one 2/2 level 1 Loyal Chinchilla.;Yes;Pack2 Custom;Pack2 Custom
+Chipmunk;1;Pet;Perky;;Sell; Stock one 1-gold copy of this pet's food perk.;Yes;Pack2 Pack4;Pack2 Pack4
+Cockroach;1;Pet;Standard;;Start of turn; Set attack to the current shop tier + 1.;Yes;Pack3;Pack3
+Cone Snail;1;Pet;;;Start of battle; Give the nearest friend behind +2 health.;Yes;Pack4;Pack4
+Cricket;1;Pet;Summoner;;Faint; Summon one 1/1 Cricket.;Yes;Pack1;Pack1
+Cuddle Toad;1;Pet;Toys;Enabler;Sell; Choose one witch toy that breaks after 2 turns.;Yes;Pack5;Pack5
+Darwin's Fox;1;Pet;;;;No ability.;No;Pack6;Pack6
+Duck;1;Pet;Bacta;Enabler;Sell; Give shop pets +1 health.;Yes;Pack1 Pack2;Pack1 Pack2
+Duckling;1;Pet;Cycler;Pivot;Sell; Give left-most shop pet +2 health.;Yes;Pack3;Pack3
+Ethiopian Wolf;1;Pet;;;;No ability.;No;Pack6;Pack6
+European Mink;1;Pet;;;;No ability.;No;Pack6;Pack6
+Fan Mussel;1;Pet;;;;No ability.;No;Pack6;Pack6
+Ferret;1;Pet;Toys;;Buy; Choose one level 1 toy from tier 1.;Yes;Pack2;Pack2
+Fish;1;Pet;Leveler;Enabler;Level-up; Give two friends +1 attack and +1 health.;Yes;Pack1;Pack1
+Fish;1;Pet;;;;No ability.;No;Pack7;Pack7
+Fly;1;Pet;;;;No ability.;No;Pack7;Pack7
+Frilled Dragon;1;Pet;;;Start of battle; Gain +1 attack and +1 health per Faint friend.;Yes;Custom;Custom
+Frog;1;Pet;Cycler;Pivot;Start of battle; Swap stats of the two adjacent friends.;Yes;Pack3;Pack3
+Frog;1;Pet;;;;No ability.;No;Pack7;Pack7
+Gecko;1;Pet;Toys;;Start of battle; If you have a toy, gain +2 health.;Yes;Pack2;Pack2
+Geometric Tortoise;1;Pet;;;;No ability.;No;Pack6;Pack6
+Giant Otter;1;Pet;;;;No ability.;No;Pack6;Pack6
+Giant Pangasius;1;Pet;;;;No ability.;No;Pack6;Pack6
+Giant Tortoise;1;Pet;;;;No ability.;No;Pack6;Pack6
+Goose;1;Pet;;;Start of battle; Remove 1 attack from the first enemy.;Yes;Pack4;Pack4
+GreaterSageGrouse;1;Pet;;;;No ability.;No;Pack6;Pack6
+Green Sea Turtle;1;Pet;;;;No ability.;No;Pack6;Pack6
+Groundhog;1;Pet;Trumpet;;Faint; Gain +1 trumpet.;Yes;Pack4;Pack4
+Hawaiian Monk Seal;1;Pet;;;;No ability.;No;Pack6;Pack6
+Helmeted Hornbill;1;Pet;;;;No ability.;No;Pack6;Pack6
+Horse;1;Pet;Summoner;;Friend summoned; Give it +1 attack until end of battle.;Yes;Pack1;Pack1
+Hummingbird;1;Pet;Strawberry;Tempo;Start of battle; Give +2 attack and +1 health to one random Strawberry friend.;Yes;Pack3;Pack3
+Humphead Wrasse;1;Pet;;;;No ability.;No;Pack6;Pack6
+Ili Pika;1;Pet;;;;No ability.;No;Pack6;Pack6
+Iriomote Cat;1;Pet;;;;No ability.;No;Pack6;Pack6
+Kakapo;1;Pet;;;;No ability.;No;Pack6;Pack6
+Kiwi;1;Pet;Strawberry;Pivot;Sell; Replace one random friendly Strawberry perk with +2 attack and +2 health.;Yes;Pack3;Pack3
+Ladybug;1;Pet;Perky;;Friend gained perk; Gain +2 attack until end of battle.;Yes;Pack2;Pack2
+Longcomb Sawfish;1;Pet;;;;No ability.;No;Pack6;Pack6
+Magpie;1;Pet;Banker;;End turn; Spend up to 1 gold and gain it back next turn.;Yes;Pack4;Pack4
+Malay Tapir;1;Pet;;;;No ability.;No;Pack6;Pack6
+MarineIguana;1;Pet;;;;No ability.;No;Pack6;Pack6
+Marmoset;1;Pet;Roller;Enabler;Sell; Your next roll is free.;Yes;Pack3 Custom;Pack3 Custom
+Monkey-Faced Bat;1;Pet;;;;No ability.;No;Pack6;Pack6
+Mosquito;1;Pet;Standard;;Start of battle; Deal 1 damage to one random enemy.;Yes;Pack1;Pack1
+Moth;1;Pet;Standard;;Start of battle; Give front-most friend +2 attack.;Yes;Pack2 Custom;Pack2 Custom
+Mouse;1;Pet;Foodie;Enabler;Sell; Replace shop food with one free Apple.;Yes;Pack3;Pack3
+Mouse;1;Pet;;;Faint; Give one random friend 1–2 health.;No;Pack7;Pack7
+Murmel;1;Pet;Leveler;Tempo;Friend level-up; Gain +1 attack and +2 health until end of battle.;Yes;Pack5;Pack5
+Opossum;1;Pet;Diva;;Sell; Give one random Faint pet in the shop +1 attack and +1 health.;Yes;Pack4;Pack4
+Otter;1;Pet;Cycler;Enabler;Buy; Give one random friend +1 health.;Yes;Pack1;Pack1
+Painted Terrapin;1;Pet;;;;No ability.;No;Pack6;Pack6
+Philippine Eagle;1;Pet;;;;No ability.;No;Pack6;Pack6
+Pied Tamarin;1;Pet;Trumpet;;Faint; Spend 1 trumpet to deal 3 damage to one random enemy.;Yes;Pack4;Pack4
+Pig;1;Pet;Banker;Enabler;Sell; Gain +1 gold.;Yes;Pack1;Pack1
+Pigeon;1;Pet;Foodie;Enabler;Sell; Stock one free Bread Crumbs.;Yes;Pack1;Pack1
+Pillbug;1;Pet;Standard;Scaler;Shop tier upgraded; Give the two nearest pets behind +1 health.;Yes;Pack3;Pack3
+Proboscis Monkey;1;Pet;;;;No ability.;No;Pack6;Pack6
+Pygmy Hippo;1;Pet;;;;No ability.;No;Pack6;Pack6
+Pygmy Hog;1;Pet;;;;No ability.;No;Pack6;Pack6
+Red Panda;1;Pet;;;;No ability.;No;Pack6;Pack6
+Roloway Monkey;1;Pet;;;;No ability.;No;Pack6;Pack6
+Saker Falcon;1;Pet;;;;No ability.;No;Pack6;Pack6
+Saola;1;Pet;;;;No ability.;No;Pack6;Pack6
+Seahorse;1;Pet;Pusher;Enabler;Start of battle; Push the last enemy one space forward.;Yes;Pack3;Pack3
+Silkmoth;1;Pet;Guard;;Friend ahead hurt; Give it +1 health. Works 2 times per turn.;Yes;Pack4;Pack4
+Silky Sifaka;1;Pet;;;;No ability.;No;Pack6;Pack6
+Snail;1;Pet;;;;No ability.;No;Pack7;Pack7
+Sneaky Egg;1;Pet;Summoner;Enabler;Start of battle; Faint and summon one 4/2 Cracked Egg.;Yes;Pack5;Pack5
+SouthernRockhopperPenguin;1;Pet;;;;No ability.;No;Pack6;Pack6
+Spoon-Billed Sandpiper;1;Pet;;;;No ability.;No;Pack6;Pack6
+Sumatran Tiger;1;Pet;;;;No ability.;No;Pack6;Pack6
+Taita Shrew;1;Pet;;;;No ability.;No;Pack6;Pack6
+Taita Trush;1;Pet;;;;No ability.;No;Pack6;Pack6
+Tasmanian Devil;1;Pet;;;;No ability.;No;Pack6;Pack6
+Tooth-Billed Pigeon;1;Pet;;;;No ability.;No;Pack6;Pack6
+TreeKangaroo;1;Pet;;;;No ability.;No;Pack6;Pack6
+Tsuchinoko;1;Pet;Leveler;Enabler;Start of battle; Jump to the front space and gain +1 experience.;Yes;Pack5;Pack5
+Tucuxi;1;Pet;;;;No ability.;No;Pack6;Pack6
+Volcano Snail;1;Pet;;;;No ability.;No;Pack6;Pack6
+Warf;1;Pet;Mana;Tempo;Gains mana; Deal 1 damage to one random enemy.;Yes;Pack5;Pack5
+White-Bellied Heron;1;Pet;;;;No ability.;No;Pack6;Pack6
+Worm;1;Pet;;;;No ability.;No;Pack7;Pack7
+African Penguin;2;Pet;Cycler;;Buy; Give three random friends +1 attack.;Yes;Pack4;Pack4
+Atlantic Puffin;2;Pet;Strawberry;Tempo;Start of battle; Deal 2 damage for each strawberry friend to one random enemy.;Yes;Pack3;Pack3
+Bat;2;Pet;Standard;;Start of battle; Make one random enemy Weak.;Yes;Pack2;Pack2
+Beluga Sturgeon;2;Pet;Perky;Enabler;Faint; Summon one 2/3 Dolphin with Rice in the back.;Yes;Pack2;Pack2
+Bigfoot;2;Pet;Roller;Enabler;Faint; Gain one free roll next turn.;Yes;Pack5;Pack5
+Bird;2;Pet;;;;No ability.;No;Pack7;Pack7
+Black Necked Stilt;2;Pet;Trumpet;;Faint; Gain +2 trumpets.;Yes;Pack4;Pack4
+Chupacabra;2;Pet;;Carry;Knock out; Give +1 health to one random friend. Triggers 3 times.;Yes;Custom;Pack5
+Crab;2;Pet;Standard;;Start of battle; Copy 50% of health from the most healthy friend.;Yes;Pack1;Pack1
+Crab;2;Pet;;;;No ability.;No;Pack7;Pack7
+Door Head Ant;2;Pet;Guard;;Empty front space; Jump to the front and gain +4 health in battle.;Yes;Pack4;Pack4
+Dove;2;Pet;Strawberry;Tempo;Faint; Give two Strawberry friends +2 attack and +2 health.;Yes;Pack3;Pack3
+Dromedary;2;Pet;Bacta;;Start of turn; Give the two left-most shop pets +1 attack and +1 health.;Yes;Pack2;Pack2
+Drop Bear;2;Pet;Guard;Enabler;Empty front space; Jump to the front and deal 3 damage to the last enemy in battle.;Yes;Pack5;Pack5
+Duck;2;Pet;;;;No ability.;No;Pack7;Pack7
+Flamingo;2;Pet;Diva;Tempo;Faint; Give the two nearest friends behind +1 attack and +1 health.;Yes;Pack1;Pack1
+Frigatebird;2;Pet;Standard;;Friend gained ailment; Give it Rice. Works 1 time per turn.;Yes;Pack2 Custom;Pack2 Custom
+Frost Wolf;2;Pet;Ailer;Enabler;Faint; Make the first enemy Cold.;Yes;Pack5;Pack5
+Gargoyle;2;Pet;Mana;Tempo;Faint; Spend mana to give the nearest friend behind +1 health per mana.;Yes;Pack5;Pack5
+Gazelle;2;Pet;Banker;;Start of turn; Gain +1 attack and +1 health until end of battle for each gold over 10.;Yes;Pack4;Pack4
+Ghost Kitten;2;Pet;Standard;Tech;;Takes 3 less damage from abilities.;Yes;Pack5;Pack5
+Golden Beetle;2;Pet;Leveler;Enabler;Sell; Gain +1 gold. Triple if attack is at least 10.;Yes;Custom;Pack5
+Guinea Pig;2;Pet;Leveler;Enabler;Buy; Summon one 1/1 Guinea Pig.;Yes;Pack3;Pack3
+Hedgehog;2;Pet;Cutter;;Faint; Deal 2 damage to ALL pets.;Yes;Pack1;Pack1
+Hedgehog;2;Pet;;;;No ability.;No;Pack7;Pack7
+Hercules Beetle;2;Pet;;;Sell; Give friends front-to-back +1 attack for each battle this has fought.;Yes;Pack4;Pack4
+Iguana;2;Pet;Pusher;Tempo;Enemy summoned or pushed; Deal 2 damage to it.;Yes;Pack3;Pack3
+Jackalope;2;Pet;Guard;Tempo;Friend jumped; Deal 2 damage to one random enemy.;Yes;Pack5;Pack5
+Jellyfish;2;Pet;Leveler;Scaler;Friend level-up; Gain +1 attack and +1 health.;Yes;Pack3;Pack3
+Kangaroo;2;Pet;Guard;;Friend ahead attacks; Gain +1 attack and +1 health.;Yes;Pack1;Pack1
+Koala;2;Pet;Cutter;Scaler;Friend hurt; Give it +1 attack and +1 health. Works 1 time per turn.;Yes;Pack3;Pack3
+Lemur;2;Pet;Toys;;Buy; Choose one level 1 toy from tier 2.;Yes;Pack2;Pack2
+Lizard;2;Pet;Summoner;;Hurt; Summon one 3/1 Lizard Tail. Works 2 times per turn.;Yes;Pack4;Pack4
+Lucky Cat;2;Pet;Leveler;Tempo;Level-up; Gain +2 attack and +2 health now and +1 gold next turn.;Yes;Pack5;Pack5
+Mandrill;2;Pet;Toys;;Faint; Break friendly tier 2 or lower toy.;Yes;Pack2;Pack2
+Mothman;2;Pet;Ailer;Tempo;Faint; Deal 2 damage to one enemy with ailments.;Yes;Pack5;Pack5
+Nightcrawler;2;Pet;Summoner;Tempo;Faint; Summon one Crawler with 3 attack, and +1 health for each friend summoned this turn.;Yes;Custom;Pack5
+Ogopogo;2;Pet;Leveler;Enabler;Start of battle; Give front-most friend +1 experience.;Yes;Pack5;Pack5
+Panda;2;Pet;Standard;Carry;Start of battle; If friend ahead, give 50% attack and health to it and then faint.;Yes;Pack3;Pack3
+Peacock;2;Pet;Cutter;Carry;Hurt; Gain +4 attack.;Yes;Pack1;Pack1
+Penguin;2;Pet;;;;No ability.;No;Pack7;Pack7
+Rabbit;2;Pet;;;;No ability.;No;Pack7;Pack7
+Rat;2;Pet;Cutter;Enabler;Faint; Summon one 1/1 Dirty Rat up front for the opponent.;Yes;Pack1;Pack1
+Robin;2;Pet;Standard;;Start of battle; Summon one 2/3 level 1 Nest and give it Egg perk.;Yes;Pack2;Pack2
+Salamander;2;Pet;Cycler;Scaler;Friend bought; If it was a Start of battle pet, gain +2 attack. Works 1 time per turn.;Yes;Pack3;Pack3
+Sea Turtle;2;Pet;Summoner;;Friend summoned; If in battle, give it +3 health.;Yes;Pack4;Pack4
+Sea Urchin;2;Pet;Diva;;Faint; Remove 5 health from the first enemy.;Yes;Pack4;Pack4
+Shrimp;2;Pet;Cycler;Scaler;Friend sold; Give one random friend +1 health.;Yes;Pack2 Custom;Pack2 Custom
+Snail;2;Pet;Standard;Comeback;End turn; If you lost last battle, give friends +1 health.;Yes;Pack1;Pack1
+Sphinx;2;Pet;Toys;Enabler;Buy; Choose one level 1 adventurous toy.;Yes;Custom;Pack5
+Spider;2;Pet;Summoner;;Faint; Summon one tier 3 pet as a 2/2 level 1.;Yes;Pack1;Pack1
+Squid;2;Pet;Trumpet;;Faint; Spend 1 trumpet to make the first enemy Inked.;Yes;Pack4;Pack4
+Squirrel;2;Pet;;;;No ability.;No;Pack7;Pack7
+Stoat;2;Pet;;;Sell; Summon one level 1 pet from your current tier as a 1/1.;Yes;Pack4;Pack4
+Stork;2;Pet;Summoner;Enabler;Faint; Summon one level 1 pet from the previous shop tier as a 3/2.;Yes;Pack3;Pack3
+Swan;2;Pet;Banker;Enabler;Start of turn; Gain +1 gold.;Yes;Pack1;Pack1
+Tabby Cat;2;Pet;Perky;;Friendly gained perk; Give two random friends +1 health until end of battle.;Yes;Pack2;Pack2
+Thunderbird;2;Pet;Mana;Enabler;Start of battle; Give the front-most friend +3 mana.;Yes;Pack5;Pack5
+Toucan;2;Pet;Perky;;Faint; Copy food perk to the nearest friend behind.;Yes;Pack2 Custom;Pack2 Custom
+Turtle;2;Pet;;;;No ability.;No;Pack7;Pack7
+Wombat;2;Pet;;;Start of battle; Copy Faint Ability as level 1 from the highest tier enemy.;Yes;Custom;Custom
+Worm;2;Pet;Foodie;Enabler;Start of turn; Stock one 2-gold Apple.;Yes;Pack1;Pack1
+Yak;2;Pet;Cutter;Enabler;End turn; Take 1 damage and gain +1 attack.;Yes;Pack3;Pack3
+Aardvark;3;Pet;;;Enemy summoned; Gain +2 attack and +2 health.;Yes;Custom;Custom
+Anteater;3;Pet;Summoner;Enabler;Faint; Summon one 1/1 level 3 Ant.;Yes;Pack3;Pack3
+Baboon;3;Pet;;;End turn; Give one random friend from the current shop tier +1 attack and +2 health.;Yes;Pack4;Pack4
+Badger;3;Pet;Standard;Carry;Faint; Deal 50% attack damage to adjacent pets.;Yes;Pack1;Pack1
+Bear;3;Pet;;;Faint; Give Honey perk to all pets within one space.;Yes;Custom;Custom
+Betta Fish;3;Pet;Diva;;Faint; Give the nearest friend behind +4 attack and +2 health.;Yes;Pack4;Pack4
+Brain Cramp;3;Pet;Guard;Enabler;Empty front space; Jump to the front and gain +2 attack and Melon perk in battle.;Yes;Pack5;Pack5
+Calygreyhound;3;Pet;Mana;Tempo;Faint; Spend mana to remove 1 health per mana from the two most healthy enemies.;Yes;Pack5;Pack5
+Camel;3;Pet;Cutter;;Hurt; Give the nearest friend behind +1 attack and +2 health.;Yes;Pack1;Pack1
+Capybara;3;Pet;Roller;Pivot;Roll; Give unfrozen shop pets +2 attack and +1 health.;Yes;Pack3;Pack3
+Cassowary;3;Pet;Strawberry;Scaler;End turn; If this has a Strawberry friend, gain +1 attack and +1 health.;Yes;Pack3;Pack3
+Chicken;3;Pet;;;;No ability.;No;Pack7;Pack7
+Deer Lord;3;Pet;;;End turn; Knock out the nearest friend ahead and stock one free Bacon.;Yes;Custom;Pack5
+Dodo;3;Pet;Standard;Carry;Start of battle; Give 50% of attack to the nearest friend ahead.;Yes;Pack1;Pack1
+Dog;3;Pet;Summoner;Tempo;Friend summoned; Gain +2 attack and +1 health until end of battle.;Yes;Pack1;Pack1
+Dolphin;3;Pet;Standard;;Start of battle; Deal 4 damage to the lowest health enemy.;Yes;Pack1;Pack1
+Eel;3;Pet;Standard;Carry;Start of battle; Gain +50% health.;Yes;Pack3;Pack3
+Elephant;3;Pet;Cutter;Enabler;After attack; Deal 1 damage to the nearest friend behind.;Yes;Pack1;Pack1
+Emperor Tamarin;3;Pet;;;Sell; Give 33% attack and health to the leftmost shop pet.;Yes;Custom;Custom
+Flea;3;Pet;;;Faint; Make the most healthy enemy Weak.;Yes;Pack4;Pack4
+Flying Fish;3;Pet;Summoner;;Friend summoned; If in battle, give it +2 experience. Works 2 times per turn.;Yes;Pack4;Pack4
+Flying Squirrel;3;Pet;Toys;;Friendly toy broke; Re-summon the toy, but its level can max be kept at 1.;Yes;Pack2;Pack2
+Foo Dog;3;Pet;;Pivot;Buy; Give future shop pets from the next tier permanent +2 health.;Yes;Custom;Pack5
+Fur-Bearing Trout;3;Pet;Mana;Enabler;Faint; Give Rambutan perk to the nearest friend behind.;Yes;Pack5;Pack5
+Giraffe;3;Pet;Standard;Scaler;End turn; Give the nearest friend ahead +1 attack and +1 health.;Yes;Pack1;Pack1
+Gold Fish;3;Pet;Banker;;End turn; Increase sell value by 1 gold.;Yes;Pack2 Custom;Pack2 Custom
+Griffin;3;Pet;Toys;Enabler;Sell; Summon a level 1 Treasure Map that leads to a Treasure Chest.;Yes;Pack5;Pack5
+Guineafowl;3;Pet;Trumpet;;Hurt; Gain +2 trumpets.;Yes;Pack4;Pack4
+Hare;3;Pet;;;Before attack; Copy a useful food perk from one random enemy. Works 1 time per battle.;Yes;Pack2;Pack2
+Hatching Chick;3;Pet;Standard;Tempo;End turn; Give the nearest friend ahead +3 attack and +3 health until end of battle.;Yes;Pack2;Pack2
+Hoopoe Bird;3;Pet;Standard;;Faint; Deal 2 damage to the first and last enemy.;Yes;Pack2;Pack2
+Leech;3;Pet;Cutter;Enabler;End turn; Deal 1 damage to the nearest pet ahead and gain +1 health.;Yes;Pack3;Pack3
+Mana Hound;3;Pet;Mana;Enabler;Start of battle; Give the nearest friend ahead +1 mana for each roll this turn, up to 5 rolls.;Yes;Pack5;Pack5
+Mandrake;3;Pet;Ailer;Enabler;Start of battle; Make one tier 2 or lower Faint enemy Dazed.;Yes;Pack5;Pack5
+Meerkat;3;Pet;Banker;;Start of battle; Give adjacent friends +1 attack for every 3 gold spent this turn.;Yes;Pack4;Pack4
+Minotaur;3;Pet;Guard;Tempo;Friend ahead attacks; Gain +1 attack and +1 health for each of the friend's level.;Yes;Pack5;Pack5
+Mole;3;Pet;Perky;;Faint; Remove the two nearest friendly perks to summon one 6/6 Mole.;Yes;Pack2 Custom;Pack2 Custom
+Musk Ox;3;Pet;Guard;;Friend ahead faints; Gain +1 attack and +2 health until end of battle.;Yes;Pack4;Pack4
+Okapi;3;Pet;Roller;Tempo;Roll; Gain +1 attack and +1 health until end of battle. Works 5 times per turn.;Yes;Pack3;Pack3
+Osprey;3;Pet;;;Faint; Summon one 2/1 Groundhog.;Yes;Pack4;Pack4
+Ouroboros;3;Pet;Roller;Pivot;Roll; Give unfrozen shop pets +1 health until end of battle for each roll this turn.;Yes;Pack5;Pack5
+Owl;3;Pet;Cycler;;Start of turn; Summon one level 1 Mouse.;Yes;Pack2;Pack2
+Owl;3;Pet;;;;No ability.;No;Pack7;Pack7
+Ox;3;Pet;Guard;;Friend ahead faints; Gain Melon perk and +1 attack. Works 1 time per turn.;Yes;Pack1;Pack1
+Pangolin;3;Pet;Toys;;Faint; If you have a toy, give the nearest friend behind +5 health.;Yes;Pack2;Pack2
+Parrot;3;Pet;;;;No ability.;No;Pack7;Pack7
+Pegasus;3;Pet;Summoner;Tempo;Friend summoned; Give three friends +1 attack until end of battle.;Yes;Custom;Pack5
+Pig;3;Pet;;;;No ability.;No;Pack7;Pack7
+Porcupine;3;Pet;;;Hurt; Deal 3 damage directly back.;Yes;Custom;Custom
+Pug;3;Pet;Leveler;Enabler;Start of battle; Give the nearest friend ahead +1 experience.;Yes;Pack3;Pack3
+Puppy;3;Pet;Toys;;Buy; Choose one level 1 toy from tier 3.;Yes;Pack2;Pack2
+Rabbit;3;Pet;Foodie;Scaler;Friendly ate food; Give them +1 health.;Yes;Pack1;Pack1
+Raccoon;3;Pet;;;;No ability.;No;Pack7;Pack7
+Rat;3;Pet;;;;No ability.;No;Pack7;Pack7
+Royal Flycatcher;3;Pet;;;Enemy summoned; Deal 3 damage to one random enemy.;Yes;Pack4;Pack4
+Sheep;3;Pet;Summoner;;Faint; Summon two 2/2 Rams.;Yes;Pack1;Pack1
+Sheep;3;Pet;;;;No ability.;No;Pack7;Pack7
+Skeleton Dog;3;Pet;Standard;Scaler;Faint; Give one random friend permanent +1 attack and +1 health.;Yes;Pack5;Pack5
+Slime;3;Pet;Summoner;Enabler;Faint; Summon one 2/2 Slime for each two battles fought.;Yes;Custom;Pack5
+Surgeon Fish;3;Pet;Trumpet;;Before attack; Spend 2 trumpets to give the nearest friend behind +6 health.;Yes;Pack4;Pack4
+Toad;3;Pet;Summoner;Tempo;Enemy hurt; Make it Weak. Works 2 times per battle.;Yes;Pack3;Pack3
+Tree;3;Pet;;;Start of battle; If this has 6 or less attack, gain Coconut perk.;Yes;Custom;Pack5
+Tropical Fish;3;Pet;Standard;Scaler;End turn; Give adjacent friends +1 health.;Yes;Pack2;Pack2
+Wasp;3;Pet;;;Shop tier upgraded; Gain +50% attack.;Yes;Custom;Custom
+Weasel;3;Pet;Banker;;Faint; Gain +1 gold on next turn.;Yes;Pack4;Pack4
+Woodpecker;3;Pet;Cutter;Enabler;Start of battle; Deal 2 damage to the nearest two pets ahead.;Yes;Pack3;Pack3
+Wyvern;3;Pet;Leveler;Pivot;Friendly level-up; Gain 1 extra shop reward.;Yes;Pack5;Pack5
+Abomination;4;Pet;Standard;;End turn; Swallow and copy the left-most Start of battle shop pet until end of battle.;Yes;Pack5;Pack5
+Anubis;4;Pet;Diva;Tempo;Start of battle; Activate tier 2 or lower Faint friends front-to-back.;Yes;Custom;Pack5
+Bison;4;Pet;Leveler;Scaler;End turn; If this has a level 3 friend, gain +1 attack and +2 health.;Yes;Pack1;Pack1
+Blobfish;4;Pet;Leveler;Enabler;Faint; Give the nearest friend behind +2 attack and +2 health and +1 experience.;Yes;Pack3;Pack3
+Blowfish;4;Pet;Cutter;;Hurt; Deal 3 damage to one random enemy.;Yes;Pack1;Pack1
+Buffalo;4;Pet;Cycler;Scaler;Three friends sold; Gain +2 attack and +2 health.;Yes;Pack2;Pack2
+Camel;4;Pet;;;;No ability.;No;Pack7;Pack7
+Cat;4;Pet;;;;No ability.;No;Pack7;Pack7
+Caterpillar;4;Pet;Leveler;;Start of turn; Gain +1 experience.;Yes;Pack2;Pack2
+Chameleon;4;Pet;Toys;;End turn; Copy friendly toy ability as level 1 until end of battle.;Yes;Pack2;Pack2
+Chimera;4;Pet;Mana;Tempo;Faint; Spend mana to summon one pet with +1 attack and +1 health per mana.;Yes;Pack5;Pack5
+Clownfish;4;Pet;Leveler;Scaler;Friendly level-up; Give it +2 attack and +2 health.;Yes;Pack3;Pack3
+Cockatoo;4;Pet;Diva;;Buy; Give one random Faint friend +2 attack and +2 health.;Yes;Pack4;Pack4
+Cow;4;Pet;;;;No ability.;No;Pack7;Pack7
+Crow;4;Pet;Leveler;Enabler;Sell; Stock one Chocolate.;Yes;Pack3;Pack3
+Cuttlefish;4;Pet;Diva;;Faint; Make the last enemy Inked.;Yes;Pack4;Pack4
+Cyclops;4;Pet;Leveler;Pivot;Friend level-up; Give it +2 mana and +1 experience. Works 1 time per turn.;Yes;Pack5;Pack5
+Deer;4;Pet;Summoner;;Faint; Summon one 5/5 Bus with Chili.;Yes;Pack1;Pack1
+Deer;4;Pet;;;;No ability.;No;Pack7;Pack7
+Doberman;4;Pet;Perky;;Start of battle; If this is your lowest tier pet, gain Coconut perk and +8 attack.;Yes;Pack2 Custom;Pack2 Custom
+Dog;4;Pet;;;;No ability.;No;Pack7;Pack7
+Donkey;4;Pet;Pusher;Tempo;Friend faints; Push the last enemy to the front. Works 1 time per battle.;Yes;Pack3;Pack3
+Dragonfly;4;Pet;;;End turn; Give +1 attack and +1 health to one friend of each level.;Yes;Custom;Custom
+Fairy;4;Pet;Toys;;Buy; Choose one level 1 wondrous toy.;Yes;Custom;Pack5
+Falcon;4;Pet;Summoner;;Knock out; Summon one 3/3 level 1 copy of it. Works 3 times per battle.;Yes;Pack4;Pack4
+Gharial;4;Pet;Toys;;Buy; Choose one level 1 toy from tier 4.;Yes;Pack2;Pack2
+Giraffe;4;Pet;;;;No ability.;No;Pack7;Pack7
+Hawk;4;Pet;Standard;Tempo;Start of battle; Deal 7 damage to the opposite enemy.;Yes;Pack3;Pack3
+Hippo;4;Pet;Standard;;Knock out; Gain +2 attack and +2 health. Gain double against tier 4 pets or higher.;Yes;Pack1;Pack1
+Hippocampus;4;Pet;;;Friend gains health; Give it +1 attack. Double in battle.;Yes;Custom;Pack5
+Jerboa;4;Pet;;;Eats apple; Give friends +1 attack and +1 health. Works 2 times per turn.;Yes;Custom;Custom
+Kraken;4;Pet;Standard;Tech;Start of battle; Remove 20% health from ALL other pets.;Yes;Pack5;Pack5
+Llama;4;Pet;Cycler;Scaler;End turn; If there is an empty space, gain +1 attack and +2 health.;Yes;Pack2;Pack2
+Lobster;4;Pet;Cycler;Pivot;Friend summoned; If outside battle, give it +2 attack and +2 health.;Yes;Pack2;Pack2
+Lynx;4;Pet;;;Start of battle; Deal damage to one random enemy equal to the sum of all friendly levels.;Yes;Custom;Custom
+Manatee;4;Pet;;;End turn; Take 5 damage and give the nearest friend ahead +2 attack and +1 health.;Yes;Pack4;Pack4
+Manta Ray;4;Pet;Banker;;End turn; If there is an empty space, gain +2 gold next turn.;Yes;Pack4;Pack4
+Microbe;4;Pet;Standard;;Faint; Make ALL pets Weak.;Yes;Pack2;Pack2
+Old Mouse;4;Pet;Toys;Enabler;End turn; Summon one random level 1 nostalgic toy.;Yes;Custom;Pack5
+Orangutan;4;Pet;Standard;Scaler;End turn; Give the lowest health friendly pet +4 health.;Yes;Pack3;Pack3
+Parrot;4;Pet;Summoner;;End turn; Copy ability from the nearest pet ahead as level 1 until end of battle.;Yes;Pack1;Pack1
+Pelican;4;Pet;Strawberry;Scaler;End turn & Start of battle; Give one random Strawberry friend +2 attack and +1 health.;Yes;Pack3;Pack3
+Penguin;4;Pet;Leveler;Scaler;End turn; Give two level 2 or higher friends +1 attack and +1 health.;Yes;Pack1;Pack1
+Platypus;4;Pet;Cycler;Enabler;Sell & Faint; Summon one 3/3 level 1 Duck and Beaver.;Yes;Pack3;Pack3
+Poison Dart Frog;4;Pet;Guard;;Friend ahead faints; Deal 4 damage to the highest health enemy.;Yes;Pack4;Pack4
+Praying Mantis;4;Pet;Diva;Enabler;Start of turn; Knock out adjacent friends and gain +2 attack and +2 health.;Yes;Pack3;Pack3
+Roc;4;Pet;Mana;Enabler;Start of battle; Give one random friend ahead +2 mana. Triggers 3 times.;Yes;Pack5;Pack5
+Rootling;4;Pet;;Scaler;End turn; Give two friends with less health than this +1 attack and +1 health.;Yes;Custom;Pack5
+Saiga Antelope;4;Pet;Trumpet;;Friend faints; Gain +1 trumpet.;Yes;Pack4;Pack4
+Scorpion;4;Pet;;;;No ability.;No;Pack7;Pack7
+Seagull;4;Pet;;;Friend summoned; Copy this pet's food perk to it. Works 1 time per turn.;Yes;Custom;Custom
+Sealion;4;Pet;;;End turn; Give friends behind +1 attack and friends ahead +1 health.;Yes;Pack4;Pack4
+Secretary Bird;4;Pet;Summoner;;Two friends faint; Give the nearest friend ahead +3 attack and +3 health.;Yes;Pack4;Pack4
+Skunk;4;Pet;Standard;;Start of battle; Remove 33% health from the highest health enemy.;Yes;Pack1;Pack1
+Slug;4;Pet;Summoner;;Faint; Summon one 2/2 Smaller Slug that summons one 1/1 Smallest Slug.;Yes;Pack4;Pack4
+Squirrel;4;Pet;Foodie;;Start of turn; Discount all shop food by 1 gold.;Yes;Pack1;Pack1
+Starfish;4;Pet;Cycler;Scaler;Friend sold; If it was a Sell pet, give one random friend +1 attack and +1 health.;Yes;Pack3;Pack3
+Tahr;4;Pet;Perky;;Faint; Give Chili perk to the nearest friend behind.;Yes;Pack2;Pack2
+Tatzelwurm;4;Pet;Guard;Tempo;Friend ahead faints; Deal 2 damage for each of its level to one random enemy.;Yes;Pack5;Pack5
+Tiger Bug;4;Pet;Guard;Enabler;Empty front space; Jump to the front and deal 3 damage to the two first enemies.;Yes;Pack5;Pack5
+Turtle;4;Pet;Diva;;Faint; Give Melon perk to the nearest friend behind.;Yes;Pack1;Pack1
+Unicorn;4;Pet;Ailer;Scaler;Friend gained ailment; Replace it with permanent +2 attack and +2 health. Works 1 time per turn.;Yes;Pack5;Pack5
+Vaquita;4;Pet;Trumpet;;Faint; Gain +50% trumpets.;Yes;Pack4;Pack4
+Visitor;4;Pet;Ailer;Enabler;Faint; Make ALL pets within one space Exposed.;Yes;Pack5;Pack5
+Whale;4;Pet;Summoner;;Start of battle; Swallow the nearest friend ahead and summon a new level 1 after fainting.;Yes;Pack1;Pack1
+Whale Shark;4;Pet;Perky;;Gain perk or ailment; Remove it and gain +2 attack and +2 health.;Yes;Pack2;Pack2
+Worm of Sand;4;Pet;Roller;Scaler;Roll 6 times; Give the two highest tier friends +1 attack and +1 health.;Yes;Pack5;Pack5
+Alpaca;5;Pet;;;Friend summoned; Give it +1 experience. Works 1 time per turn.;Yes;Custom;Custom
+Armadillo;5;Pet;Cutter;;Start of battle; Give ALL pets +8 health.;Yes;Pack1;Pack1
+Axolotl;5;Pet;Perky;Scaler;Friend gained perk; Give it permanent +1 attack and +1 health.;Yes;Pack2;Pack2
+Bad Dog;5;Pet;Toys;Enabler;Buy; Choose one level 1 toy that brings doom and chaos!;Yes;Pack5;Pack5
+Bear;5;Pet;;;;No ability.;No;Pack7;Pack7
+Beluga Whale;5;Pet;Summoner;;Eats food; Swallow the left-most shop pet and release it as level 1 after fainting.;Yes;Pack4;Pack4
+Blue Ringed Octopus;5;Pet;;;Buy; Give friends +1 attack and +1 health.;Yes;Pack4;Pack4
+Boitata;5;Pet;;;Before attack; Make the target Crisp. Works 1 time per battle.;Yes;Custom;Pack5
+Chicken;5;Pet;Cycler;;Faint; Give future shop pets permanent +1 attack and +1 health.;Yes;Pack2;Pack2
+Cow;5;Pet;Foodie;Enabler;Buy; Replace shop food with two free Milk.;Yes;Pack1;Pack1
+Crane;5;Pet;Guard;;Friend ahead hurt; Give it Melon perk and +5 attack. Works 1 time per turn.;Yes;Pack4;Pack4
+Crocodile;5;Pet;Standard;;Start of battle; Deal 8 damage to the last enemy.;Yes;Pack1;Pack1
+Crocodile;5;Pet;;;;No ability.;No;Pack7;Pack7
+Dolphin;5;Pet;;;;No ability.;No;Pack7;Pack7
+Eagle;5;Pet;Diva;Tempo;Faint; Summon one 5/5 level 1 pet from the next shop tier.;Yes;Pack2;Pack2
+Egyptian Vulture;5;Pet;Diva;;Knock out; Activate ability on the nearest Faint friend behind. Works 1 time per battle.;Yes;Pack4;Pack4
+Emu;5;Pet;Guard;;Empty front space; Push nearest friend ahead to the front and give +4 health in battle.;Yes;Pack4;Pack4
+Fire Ant;5;Pet;Diva;;Faint; Give attack to the highest tier friend.;Yes;Pack4;Pack4
+Fox;5;Pet;Standard;Scaler;End turn; Steal the right-most shop food.;Yes;Pack3;Pack3
+Goat;5;Pet;Cycler;Enabler;Friend bought; Gain +1 gold. Works 2 times per turn.;Yes;Pack2;Pack2
+Hamster;5;Pet;Roller;Enabler;Roll; Gain +1 gold. Works 2 times per turn.;Yes;Pack3;Pack3
+Horse;5;Pet;;;;No ability.;No;Pack7;Pack7
+Hyena;5;Pet;;;Start of battle; Swap attack and health of ALL pets.;Yes;Custom;Custom
+Jersey Devil;5;Pet;;;Friend summoned; Give it +1 attack and +1 health for each level 3 pet sold this game, up to 5 sold.;Yes;Pack5;Pack5
+Kangaroo;5;Pet;;;;No ability.;No;Pack7;Pack7
+Kappa;5;Pet;;;Faint; Summon one random 14/16 pet from tier 3 up front for you and the opponent.;Yes;Custom;Pack5
+Kitsune;5;Pet;Mana;Enabler;Friend faints; Transfer all friendly mana + 2 to the nearest friend ahead.;Yes;Pack5;Pack5
+Lion;5;Pet;Standard;Carry;Start of battle; If this is your highest tier pet, gain +50% attack and health.;Yes;Pack3;Pack3
+Loveland Frogman;5;Pet;Guard;Scaler;Friend jumped; Give it permanent +2 attack and +2 health.;Yes;Pack5;Pack5
+Macaque;5;Pet;;;Start of battle; Summon one 12/12 Orangutan with the same food perk as this.;Yes;Pack4;Pack4
+Mimic;5;Pet;Summoner;Tempo;Three friends faint; Gain +1 gold on next turn.;Yes;Custom;Pack5
+Monkey;5;Pet;Standard;Scaler;End turn; Give front-most friend +2 attack and +3 health.;Yes;Pack1;Pack1
+Monkey;5;Pet;;;;No ability.;No;Pack7;Pack7
+Moose;5;Pet;;;End turn; Unfreeze shop and give one random friend +3 health for each tier 1 shop pet.;Yes;Custom;Custom
+Mosasaurus;5;Pet;Toys;;Friendly toy broke; Give adjacent friends +2 attack and +3 health.;Yes;Pack2;Pack2
+Nessie;5;Pet;Roller;Tempo;Faint; Summon one Nessie with +1 attack and +2 health for each roll this turn, up to 7 rolls.;Yes;Pack5;Pack5
+Nurikabe;5;Pet;;;;Takes 4 less damage. Works 3 times per turn.;Yes;Custom;Pack5
+Nurse Shark;5;Pet;Trumpet;;Faint; Spend up to 6 trumpets and deal triple as damage to one random enemy.;Yes;Pack4;Pack4
+Nyala;5;Pet;Trumpet;;Faint; Gain +8 trumpets.;Yes;Pack4;Pack4
+Panther;5;Pet;Perky;;;Perks are two times stronger on this.;Yes;Pack2;Pack2
+Pixiu;5;Pet;Mana;Scaler;Faint; Spend 6 mana to gain +3 gold next turn.;Yes;Pack5;Pack5
+Polar Bear;5;Pet;Standard;Pivot;Start of turn; Give one random frozen shop pet +4 attack and +4 health.;Yes;Pack3;Pack3
+Poodle;5;Pet;Standard;Scaler;End turn; Give +1 attack and +1 health to one friend of each tier.;Yes;Pack2;Pack2
+Raccoon;5;Pet;Perky;;Before attack; Steal food perk from target. Works 1 time per battle.;Yes;Custom;Custom
+Red Dragon;5;Pet;Ailer;Enabler;Start of battle; Make the last enemy Crisp.;Yes;Pack5;Pack5
+Rhino;5;Pet;Standard;;Knock out; Deal 4 damage to the first enemy. Double against tier 1 pets.;Yes;Pack1;Pack1
+Rooster;5;Pet;Summoner;Carry;Faint; Summon one Chick with 1 health and 50% attack of this.;Yes;Pack1;Pack1
+Salmon of Knowledge;5;Pet;Leveler;Enabler;Start of battle; Give the two front-most friends AND enemies +2 experience.;Yes;Pack5;Pack5
+Scorpion;5;Pet;Standard;Comeback;Summoned; Gain Peanut perk.;Yes;Pack1;Pack1
+Seal;5;Pet;Foodie;Scaler;Eats food; Give three random friends +1 attack.;Yes;Pack1;Pack1
+Shark;5;Pet;Summoner;Scaler Tempo;Friend faints; Gain +2 attack and +2 health.;Yes;Pack1;Pack1
+Shoebill;5;Pet;Strawberry;Scaler;End turn; Give Strawberry friends +1 attack and +2 health.;Yes;Pack3;Pack3
+Siberian Husky;5;Pet;Standard;Scaler;End turn; Give friends with no food perks +1 attack and +1 health.;Yes;Pack3;Pack3
+Silver Fox;5;Pet;Banker;;Before attack; Gain +1 gold on next turn. Works 3 times per battle.;Yes;Pack4;Pack4
+Snake;5;Pet;;;;No ability.;No;Pack7;Pack7
+Snapping Turtle;5;Pet;Perky;Tempo;Faint; Give Skewer perk to the nearest friend behind.;Yes;Pack2;Pack2
+Sting Ray;5;Pet;Toys;;Buy; Choose one level 1 toy from tier 5.;Yes;Pack2;Pack2
+Stonefish;5;Pet;Standard;Comeback;Faint; Deal attack damage directly back to whoever knocked this out.;Yes;Pack2;Pack2
+Swordfish;5;Pet;Standard;Comeback;Start of battle; Deal 100% attack damage to the most healthy enemy and itself.;Yes;Pack3;Pack3
+Tandgnost;5;Pet;;;Buy; Give future shop Tandgrisner +2 attack and +2 health.;Yes;Custom;Pack5
+Tandgrisner;5;Pet;;;Buy; Give future shop Tandgnost +2 attack and +2 health.;Yes;Custom;Pack5
+Triceratops;5;Pet;Cutter;Tempo;Hurt; Give one random friend +3 attack and +3 health.;Yes;Pack3;Pack3
+Turkey;5;Pet;Summoner;Enabler;Friend summoned; Give it +3 attack and +2 health.;Yes;Pack1;Pack1
+Vampire Bat;5;Pet;Ailer;Tempo;Enemy gained ailment; Deal 3 damage to it and gain damage as health. Works 2 times per battle.;Yes;Pack5;Pack5
+Vulture;5;Pet;Summoner;Tempo;Two friends faint; Deal 4 damage to one random enemy.;Yes;Pack3;Pack3
+Werewolf;5;Pet;Standard;Carry;Start of battle; If turn number is even, gain +100% attack and health.;Yes;Pack5;Pack5
+Wolf;5;Pet;Summoner;;Faint; Summon three 3/2 Pigs.;Yes;Pack4;Pack4
+Zebra;5;Pet;Cycler;Enabler;Buy & Sell; Give one random friend +2 attack and +2 health.;Yes;Pack3;Pack3
+Anglerfish;6;Pet;Cycler;Enabler;Buy; Choose one free pet from your last opponent to stock.;Yes;Pack2;Pack2
+Behemoth;6;Pet;Standard;Carry;End turn; Gain +2 attack and +2 health. Attack and health can go up to 100!;Yes;Pack5;Pack5
+Bird of Paradise;6;Pet;Banker;;Spend 7 gold; Give three random friends +1 attack and +1 health.;Yes;Pack4;Pack4
+Boar;6;Pet;Standard;Tempo;Before attack; Gain +4 attack and +2 health.;Yes;Pack1 Custom;Pack1 Custom
+Cat;6;Pet;Foodie;Scaler;;Food gives double attack and health. Works 2 times per turn.;Yes;Pack1;Pack1
+Catfish;6;Pet;;;Start of turn; Spend 1 gold to activate Buy ability on the nearest friend ahead.;Yes;Pack4;Pack4
+Cerberus;6;Pet;Guard;Enabler;Empty front space; Summon one 8/8 Fire Pup up front. Works 1 time per turn.;Yes;Pack5;Pack5
+Cobra;6;Pet;Guard;;Friend ahead attacks; Deal 20% attack damage to one random enemy.;Yes;Pack4;Pack4
+Cockatrice;6;Pet;Standard;Comeback;Start of battle; Transform the back-most level 1 or lower enemy to rock.;Yes;Custom;Pack5
+Dragon;6;Pet;Cycler;Scaler;Tier 1 friend bought; Give friends +1 attack and +1 health.;Yes;Pack1 Pack2;Pack1 Pack2
+Elephant;6;Pet;;;;No ability.;No;Pack7;Pack7
+Elephant Seal;6;Pet;Perky;Scaler;Gain perk; Give friends +1 attack and +1 health. Double in battle.;Yes;Pack2;Pack2
+Fly;6;Pet;Summoner;;Friend faints; Summon one 4/4 fly in its place. Works 3 times per turn.;Yes;Pack1;Pack1
+German Shepherd;6;Pet;Summoner;;Friend summoned; Give 25% of attack to it until end of battle.;Yes;Pack4;Pack4
+Gorilla;6;Pet;Cutter;Carry;Hurt; Gain Coconut perk. Works 1 time per turn.;Yes;Pack1;Pack1
+Great One;6;Pet;;;Summoned; Deal 6 damage to ALL other pets.;Yes;Custom;Pack5
+Grizzly Bear;6;Pet;Summoner;;Five friendly attacks; Deal 6 damage to two random enemies.;Yes;Pack4;Pack4
+Hammerhead Shark;6;Pet;Leveler;Tempo;Start of turn; If this has a level 3 friend, gain +3 gold.;Yes;Pack3;Pack3
+Highland Cow;6;Pet;Trumpet;;Start of battle; Gain +1 trumpet for each 3 health this has.;Yes;Pack4;Pack4
+Hippo;6;Pet;;;;No ability.;No;Pack7;Pack7
+Hydra;6;Pet;Summoner;Carry;Faint; Summon one 5/5 Head for each 10 attack this has.;Yes;Pack5;Pack5
+Komodo;6;Pet;Standard;Scaler;End turn; Give friends ahead +1 and +1 and then shuffle their positions.;Yes;Pack3;Pack3
+Leopard;6;Pet;Standard;Carry;Start of battle; Deal 50% attack damage to one random enemy.;Yes;Pack1;Pack1
+Leviathan;6;Pet;;;End turn; Summon four 10/10 Fishes.;Yes;Custom;Pack5
+Lion;6;Pet;;;;No ability.;No;Pack7;Pack7
+Lioness;6;Pet;;;End turn; Give current and future shop pets +2 attack and +2 health.;Yes;Custom;Custom
+Lionfish;6;Pet;Standard;Carry;Faint; Deal 3 damage to one random enemy. Repeat for each 10 attack this has.;Yes;Pack2 Custom;Pack2 Custom
+Mammoth;6;Pet;Diva;;Faint; Give friends +2 attack and +2 health.;Yes;Pack1;Pack1
+Manticore;6;Pet;Ailer;Tempo;;Enemy ailments are two times worse.;Yes;Pack5;Pack5
+Mantis Shrimp;6;Pet;Standard;;Start of battle; Deal 10 damage to the first enemy.;Yes;Pack2;Pack2
+Mongoose;6;Pet;Toys;;Buy; Choose one level 1 toy from tier 6.;Yes;Pack2;Pack2
+Octopus;6;Pet;Standard;Carry;After attack; Deal 6 damage to one random enemy.;Yes;Pack2;Pack2
+Orca;6;Pet;Summoner;Enabler;Faint; Summon one random Faint pet from any pack.;Yes;Pack3;Pack3
+Ostrich;6;Pet;Standard;Scaler;End turn; Gain +1 attack and +1 health for each tier 5 pet or higher in the shop.;Yes;Pack3;Pack3
+Oyster;6;Pet;Banker;;Sell; Gain +3 gold.;Yes;Pack4;Pack4
+Phoenix;6;Pet;Ailer;Tempo;Faint; Make ANY three random pets Crisp, then summon one 6/6 Young Phoenix.;Yes;Pack5;Pack5
+Piranha;6;Pet;Cutter;Tempo;Hurt; Give friends +3 attack.;Yes;Pack3;Pack3
+Pteranodon;6;Pet;Diva;;Friend faints; Re-summon it behind this as a 1/1. Works 1 time per turn.;Yes;Pack4;Pack4
+Puma;6;Pet;;;;Friendly toy repeats its ability as level 1.;Yes;Pack2;Pack2
+Questing Beast;6;Pet;Toys;Enabler;Sell; Choose one level 1 king toy.;Yes;Custom;Pack5
+Quetzalcoatl;6;Pet;Leveler;Enabler;End turn; Give one random tier 3 or lower friend +2 experience.;Yes;Pack5;Pack5
+Reindeer;6;Pet;Standard;Carry;Before attack; Gain Melon perk. Works 1 time per battle.;Yes;Pack3;Pack3
+Rhino;6;Pet;;;;No ability.;No;Pack7;Pack7
+Sabertooth Tiger;6;Pet;Summoner;Enabler;Hurt; Summon one random tier 1 pet as a 5/5.;Yes;Pack3;Pack3
+Sauropod;6;Pet;Foodie;Enabler;Food bought; Gain +1 gold. Works 3 times per turn.;Yes;Pack2;Pack2
+Sea Serpent;6;Pet;Mana;Tempo;Faint; Spend mana to deal 2 damage per mana to the most healthy enemy.;Yes;Pack5;Pack5
+Shark;6;Pet;;;;No ability.;No;Pack7;Pack7
+Sleipnir;6;Pet;Mana;Enabler;Start of battle; Give the front-most friend +1 mana for each 2 attack this has.;Yes;Pack5;Pack5
+Snake;6;Pet;Guard;;Friend ahead attacks; Deal 5 damage to one random enemy.;Yes;Pack1;Pack1
+Spinosaurus;6;Pet;Summoner;Tempo;Friend faints; Give one random friend +3 attack and +2 health.;Yes;Pack3;Pack3
+Stegosaurus;6;Pet;Standard;Tempo;Start of battle; Give one perk-less friend +1 and +1 multiplied with turn number.;Yes;Pack3;Pack3
+Tapir;6;Pet;;;Faint; Summon one level 1 copy of a random friendly pet.;Yes;Custom;Custom
+Team Spirit;6;Pet;Leveler;Scaler;Friend level-up; Give friends +1 attack and +2 health.;Yes;Pack5;Pack5
+Tiger;6;Pet;Standard;;;The friend ahead repeats their ability in battle as if they were level 1.;Yes;Pack1;Pack1
+Tiger;6;Pet;;;;No ability.;No;Pack7;Pack7
+Tyrannosaurus;6;Pet;Standard;Scaler Pivot;End turn; Give two tier 5 friends or higher +2 attack and +2 health.;Yes;Pack2;Pack2
+Velociraptor;6;Pet;Strawberry;Tempo;Start of battle; Give Coconut perk to one random Strawberry friend.;Yes;Pack3;Pack3
+Walrus;6;Pet;;;Faint; Give Peanut perk to one random friend.;Yes;Custom;Custom
+Warthog;6;Pet;;;Faint; Give random friends +1 attack and +1 health for every 3 attack this has.;Yes;Pack4;Pack4
+Whale;6;Pet;;;;No ability.;No;Pack7;Pack7
+White Tiger;6;Pet;;;Start of battle; Give the nearest friend behind +3 experience.;Yes;Custom;Custom
+Wildebeest;6;Pet;Trumpet;;Before attack; Spend 4 trumpets to gain Coconut perk. Works 1 time per battle.;Yes;Pack4;Pack4
+Wolverine;6;Pet;Standard;;;Adjacent friendly abilities deal 3 damage extra.;Yes;Pack1;Pack1
+Yeti;6;Pet;Roller;Enabler;End turn; Roll three times while freezing duplicate pets.;Yes;Pack5;Pack5
+Apple;1;Food;;;Instant;Give one pet +1 attack and +1 health.;Yes;Pack1, Pack2, Pack4;Pack1 Pack2 Pack4
+Bacon;1;Food;;;Instant;Give one pet +2 attack.;Yes;Custom;Custom
+Blueberry;1;Food;;;Perk;Prioritize this for enemy random abilities.;Yes;Custom;Custom
+Cookie;1;Food;;;Instant;Give one pet +2 attack and +2 health until end of battle.;Yes;Custom;Custom
+Egg;1;Food;;;Perk;Deal 2 damage before attacking, once.;Yes;Pack4;Pack4
+Honey;1;Food;;;Perk;Summon one 1/1 Bee after fainting.;Yes;Pack1, Pack2;Pack1 Pack2
+Love Potion;1;Food;Standard;;Perk;Give nearest friend ahead +2 health before battle.;Yes;Pack5;Pack5
+Peach;1;Food;;;Instant;Give one pet +2 health.;Yes;Pack3;Pack3
+Strawberry;1;Food;;;Perk;Enables Strawberry abilities.;Yes;Pack3;Pack3
+Water of Youth;1;Food;Standard;;Instant;Transform one pet into another from the same tier.;Yes;Pack5;Pack5
+Broccoli;2;Food;;;Instant;Give one pet +3 health and remove 1 attack.;Yes;Pack3;Pack3
+Cherry;2;Food;Trumpet;;Perk;Gain 2 trumpets on start of battle.;Yes;Pack4;Pack4
+Chocolate Cake;2;Food;Diva;;Perk;Gain +3 experience and faint before attacking.;Yes;Pack4;Pack4
+Cupcake;2;Food;;;Instant;Give one pet +3 attack and +3 health until end of battle.;Yes;Pack1;Pack1
+Fairy Dust;2;Food;Guard;;Perk;Jump to the front space when empty in battle, once.;Yes;Pack5;Pack5
+Fried Shrimp;2;Food;;;Instant;Give one pet +3 attack and remove 1 health.;Yes;Pack3;Pack3
+Health Potion;2;Food;Standard;;Perk;Gain +3 health for each level before battle.;Yes;Pack5;Pack5
+Meat Bone;2;Food;;;Perk;Attack with +3 damage.;Yes;Pack1, Pack2;Pack1 Pack2
+Rice;2;Food;;;Perk;Sell for +2 gold.;Yes;Pack2;Pack2
+Sleeping Pill;2;Food;;;Instant;Make one pet faint. Always on sale!;Yes;Pack1, Pack2;Pack1 Pack2
+Wall Chicken;2;Food;Ailer;;Instant;Give one pet +3 attack and Weak.;Yes;Pack5;Pack5
+Avocado;3;Food;Banker;;Instant;Gain +3 gold on next turn.;Yes;Pack4;Pack4
+Croissant;3;Food;;;Perk;Gain +1 attack at end of turn.;Yes;Pack2, Custom;Pack2 Custom
+Cucumber;3;Food;;;Perk;Gain +1 health at end of turn.;Yes;Pack3;Pack3
+Easter Egg;3;Food;Summoner;;Perk;Summon one 2/1 Bunny after fainting that attacks for double damage.;Yes;Pack5;Pack5
+Fig;3;Food;;;Perk;Deal 4 damage to the lowest health enemy on start of battle.;Yes;Pack4;Pack4
+Garlic;3;Food;;;Perk;Take 2 less damage.;Yes;Pack1, Pack2;Pack1 Pack2
+Gingerbread Man;3;Food;Leveler;;Perk;Gain +1 experience before battle.;Yes;Pack5;Pack5
+Just-Right Porridge;3;Food;Standard;;Instant;Give one pet +3 to their lowest stat.;Yes;Pack5;Pack5
+Lettuce;3;Food;;;Instant;Give three pets from the current shop tier or higher +1 attack and +1 health.;Yes;Pack4;Pack4
+Lollipop;3;Food;;;Instant;Swap Attack and Health of a pet.;Yes;Pack3;Pack3
+Pineapple;3;Food;;;Perk;Ability deals +2 damage.;Yes;Custom;Custom
+Salad Bowl;3;Food;;;Instant;Give two random pets +1 attack and +1 health.;Yes;Pack1, Pack2;Pack1 Pack2
+Banana;4;Food;Summoner;;Perk;Summon one 4/4 Monkey on faint.;Yes;Pack4;Pack4
+Canned Food;4;Food;;;Instant;Give all current and future shop pets +1 attack and +1 health.;Yes;Pack1, Pack2;Pack1 Pack2
+Cheese;4;Food;;;Perk;Attack with double damage, once.;Yes;Pack3;Pack3
+Donut;4;Food;;;Perk;Prioritize this for friendly random abilities.;Yes;Custom;Custom
+Drink-Me Liquid;4;Food;Standard;;Instant;Remove 2 attack from one pet and then give it +5 health.;Yes;Pack5;Pack5
+Eat-Me Cake;4;Food;Standard;;Instant;Remove 2 health from one pet and then give it +5 attack.;Yes;Pack5;Pack5
+Fortune Cookie;4;Food;;;Perk;Attack has 50% chance to deal double damage.;Yes;Custom;Custom
+Grapes;4;Food;;;Perk;Gain +1 gold at the start of every turn.;Yes;Pack3;Pack3
+Magic Beans;4;Food;Standard;;Perk;Gain Golden Egg next turn.;Yes;Pack5;Pack5
+Pear;4;Food;;;Instant;Give one pet +2 attack and +2 health.;Yes;Pack1;Pack1
+Pie;4;Food;;;Perk;Gain +4 attack and +4 health before battle.;Yes;Pack2;Pack2
+Potato;4;Food;;;Perk;Take 10 less damage from abilities and perks, twice.;Yes;Pack4;Pack4
+Salt;4;Food;;;Perk;Attack lower tier pets for double damage.;Yes;Pack2;Pack2
+Waffle;4;Food;;;Instant;Activate buy ability or give +3 health.;Yes;Pack4;Pack4
+Carrot;5;Food;;;Perk;Gain +1 attack and +1 health at end of turn.;Yes;Pack3;Pack3
+Chili;5;Food;;;Perk;Attack second enemy for 5 damage.;Yes;Pack1;Pack1
+Chocolate;5;Food;;;Instant;Give one pet +1 experience.;Yes;Pack1, Pack2, Pack4, Pack5;Pack1 Pack2 Pack4 Pack5
+Durian;5;Food;;;Perk;Reduce the most healthy enemy by 33% health before attacking, once.;Yes;Pack4;Pack4
+Eggplant;5;Food;;;Perk;Push opposite enemy 1 space forward on start of battle.;Yes;Custom;Custom
+Lasagna;5;Food;;;Instant;Give one pet +2 attack and +3 health.;Yes;Pack2;Pack2
+Lemon;5;Food;;;Perk;Take 7 less damage, twice.;Yes;Pack2, Custom;Pack2 Custom
+Mana Potion;5;Food;Mana;;Instant;Give one pet +6 mana. Half the mana will decay on start of each turn.;Yes;Pack5;Pack5
+Onion;5;Food;Guard;;Perk;Move to the back when in the front, once.;Yes;Pack4;Pack4
+Pepper;5;Food;;;Perk;Health does not go under 1. Removed after taking damage.;Yes;Pack3;Pack3
+Stew;5;Food;;;Instant;Give three random pets +2 health.;Yes;Pack3;Pack3
+Sushi;5;Food;;;Instant;Give three random pets +1 attack and +1 health.;Yes;Pack1;Pack1
+Taco;5;Food;;;Instant;Give three random pets +2 attack.;Yes;Pack3;Pack3
+Yggdrasil Fruit;5;Food;Summoner;;Perk;Summon two 3/3 Nordic Goats after fainting.;Yes;Pack5;Pack5
+Chicken Leg;6;Food;;;Instant;Give one pet +3 attack and +3 health.;Yes;Custom;Custom
+Cornucopia;6;Food;;;Instant;Choose one free tier 6 food to stock from all packs.;Yes;Pack5;Pack5
+Hot Dog;6;Food;;;Instant;Give two random pets +4 attack.;Yes;Pack3;Pack3
+Konpeito;6;Food;Standard;;Instant;Transform one pet into another from one higher tier.;Yes;Pack5;Pack5
+Melon;6;Food;;;Perk;Take 20 less damage, once.;Yes;Pack1, Pack2;Pack1 Pack2
+Mushroom;6;Food;;;Perk;Come back as a 1/1 after fainting.;Yes;Pack1;Pack1
+Orange;6;Food;;;Instant;Give two random pets +4 health.;Yes;Pack3;Pack3
+Pancakes;6;Food;;;Perk;Give friends +2 attack and +2 health before battle.;Yes;Pack2;Pack2
+Peach of Immortality;6;Food;Standard;;Instant;Give one pet +1 attack and +1 health for each Peach of Immortality bought this game.;Yes;Pack5;Pack5
+Pita Bread;6;Food;;;Perk;Gain +15 health when hurt, once.;Yes;Pack4;Pack4
+Pizza;6;Food;;;Instant;Give two random pets +2 attack and +2 health.;Yes;Pack1;Pack1
+Popcorn;6;Food;;;Perk;Summon a random pet from the same tier after fainting.;Yes;Pack3;Pack3
+Pretzel;6;Food;;;Instant;Give one pet +2 attack and +2 health. Double if all pets are tier 4 or higher.;Yes;Pack4;Pack4
+Soft Ice;6;Food;;;Instant;Give all pets +1 attack.;Yes;Custom;Custom
+Steak;6;Food;;;Perk;Attack with +20 damage, once.;Yes;Pack1, Pack2;Pack1 Pack2
+Tomato;6;Food;;;Perk;Deal 8 damage to the last enemy before attacking, once.;Yes;Pack4;Pack4

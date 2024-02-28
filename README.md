@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+<img alt="SAP HUB - A fan-made website for Super Auto Pets" src="https://github.com/fluid-design-io/SAP-hub/blob/main/app/icon.png?raw=true" width='256' height='256'>
+</div>
 
-## Getting Started
+<a href="https://saphub.vercel.app/">
+  <h1 align="center">SAP HUB</h1>
+</a>
 
-First, run the development server:
+<p align="center">
+ A fan-made website for Super Auto Pets
+</p>
+
+## Features
+
+-   Super Cool UI ✨
+-   Popular builds 🔨
+-   Powerfull full-text search 📝
+-   Tutorials 📚
+-   Updates 🚀
+
+## Installation
+
+Use the package manager [bun](https://bun.sh/) to install SAP HUB.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+bun install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Seed Data
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+SAP Hub uses [supabase](https://supabase.io/) as a backend database, you need to first install
+the supabase local CLI and run `supabase start` to start the local server.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The data is stored under `public/data` folder. To populate the data, run the following command:
 
-## Learn More
+```bash
+bun seed
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Roadmap
 
-## Deploy on Vercel
+- [ ] Filter pets, food, toys, and custom packs ✨
+- [ ] When viewing a pet, food, show related pet or food that goes well with it 🐾 For example, Tiger + Lionfish, Jerboa + Apple, etc...
+- [ ] Smart hover on pets, food, toys, and custom packs 🐾 (Similair to Wiki hover card)
+- [ ] Sectioned tutorials for better navigation 📚
+- [ ] More tutorials and resources 📖
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[MIT](https://choosealicense.com/licenses/mit/)
