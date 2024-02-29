@@ -11,7 +11,7 @@ export async function middleware(request: NextRequest) {
         data: { user },
     } = await supabase.auth.getUser();
     // redirect to home if user doesn't have editor access
-    if (pathname.startsWith('/keystatic')) {
+    if (pathname.startsWith('/editor')) {
         if (!hasEditorAccess(user)) {
             return NextResponse.redirect(new URL(`/`, request.url));
         }
