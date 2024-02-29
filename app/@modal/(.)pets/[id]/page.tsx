@@ -1,24 +1,22 @@
+import Loading from '@/app/pets/[id]/loading';
 import Detail from '@/app/pets/detail';
 import Modal from '@/components/site/intercept-modal';
-import { createClient } from '@/utils/supabase/client';
+import pets from '@/public/data/pets.json';
 import { notFound } from 'next/navigation';
+import { Suspense } from 'react';
 
 export default async function PetModal({
     params: { id },
 }: {
     params: { id: string };
 }) {
-    const supabase = createClient();
-    const { data } = await supabase
-        .from('pets')
-        .select('*')
-        .eq('id', id)
-        .maybeSingle();
+    const data = pets.find((p) => p.Id === id);
     if (!data) return notFound();
-
     return (
-        <Modal title={data.name} description={data.perk_note}>
-            <Detail pet={data} />
+        <Modal title={data.Name} description={data?.PerkNote}>
+            <Suspense fallback={<Loading />}>
+                <Detail id={id} />
+            </Suspense>
         </Modal>
     );
 }

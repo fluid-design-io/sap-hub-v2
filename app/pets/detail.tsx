@@ -9,17 +9,26 @@ import { Tables } from '@/types/database';
 import { createClient } from '@/utils/supabase/client';
 import { Dice1, Dice2, Dice3, Dice4, Dice5, Dice6 } from 'lucide-react';
 import Image from 'next/image';
+import { notFound } from 'next/navigation';
 import React from 'react';
 
 type PetDetailProps = {
-    pet: Tables<'pets'>;
+    // pet: Tables<'pets'>;
+    id: string;
     imageClassName?: string;
 };
 
 const dice = [Dice1, Dice2, Dice3, Dice4, Dice5, Dice6];
 
-async function Detail({ pet, imageClassName }: PetDetailProps) {
+async function Detail({ id, imageClassName }: PetDetailProps) {
+    await new Promise((resolve) => setTimeout(resolve, 2000));
     const supabase = createClient();
+    const { data: pet } = await supabase
+        .from('pets')
+        .select('*')
+        .eq('id', id)
+        .maybeSingle();
+    if (!pet) return notFound();
     const { data: overview } = await supabase
         .from('overview')
         .select('Archetype, Trigger, Roles')
