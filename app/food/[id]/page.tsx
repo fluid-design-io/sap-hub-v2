@@ -1,28 +1,28 @@
 import { PageHeader } from '@/components/site/page-header';
 import Container from '@/components/ui/container';
 import { getUrl } from '@/lib/get-item-public-url';
+import food from '@/public/data/food.json';
 import { createClient } from '@/utils/supabase/client';
 import { Metadata, ResolvingMetadata } from 'next';
 import { notFound } from 'next/navigation';
+import { Suspense } from 'react';
 
 import Detail from '../detail';
+import Loading from './loading';
 
 export default async function PetPage({
     params: { id },
 }: {
     params: { id: string };
 }) {
-    const supabase = createClient();
-    const { data } = await supabase
-        .from('food')
-        .select('*')
-        .match({ id })
-        .maybeSingle();
+    const data = food.find((p) => p.Id === id);
     if (!data) return notFound();
     return (
         <Container as={'main'}>
-            <PageHeader title={data.name} subtitle="" />
-            <Detail data={data} imageClassName="rounded-lg -mt-4" />
+            <PageHeader title={data.Name} subtitle="" />
+            <Suspense fallback={<Loading />}>
+                <Detail id={id} imageClassName="rounded-lg -mt-4" />
+            </Suspense>
         </Container>
     );
 }

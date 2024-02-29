@@ -7,17 +7,24 @@ import { Tables } from '@/types/database';
 import { createClient } from '@/utils/supabase/client';
 import { Dice1, Dice2, Dice3, Dice4, Dice5, Dice6 } from 'lucide-react';
 import Image from 'next/image';
+import { notFound } from 'next/navigation';
 import React from 'react';
 
 type DetailProps = {
-    data: Tables<'toys'>;
+    id: string;
     imageClassName?: string;
 };
 
 const dice = [Dice1, Dice2, Dice3, Dice4, Dice5, Dice6];
 
-async function Detail({ data, imageClassName }: DetailProps) {
+async function Detail({ id, imageClassName }: DetailProps) {
     const supabase = createClient();
+    const { data } = await supabase
+        .from('toys')
+        .select('*')
+        .match({ id })
+        .maybeSingle();
+    if (!data) return notFound();
     const { data: overview } = await supabase
         .from('overview')
         .select('Archetype, Trigger, Roles')

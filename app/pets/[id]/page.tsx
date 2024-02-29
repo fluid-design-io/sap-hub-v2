@@ -27,12 +27,12 @@ export default async function PetPage({
     );
 }
 
-// export async function generateStaticParams() {
-//     const supabase = createClient();
-//     const { data: pets } = await supabase.from('pets').select('id').limit(1000);
-//     if (!pets) return [];
-//     return pets.map(({ id }) => ({ id }));
-// }
+export async function generateStaticParams() {
+    const supabase = createClient();
+    const { data: pets } = await supabase.from('pets').select('id').limit(1000);
+    if (!pets) return [];
+    return pets.map(({ id }) => ({ id }));
+}
 
 type PageProps = {
     params: { id: string };
