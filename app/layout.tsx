@@ -2,20 +2,14 @@ import { Footer } from '@/components/site/footer';
 import Header from '@/components/site/header';
 import { ThemeProvider } from '@/components/theme/theme-provider';
 import { Toaster } from '@/components/ui/sonner';
+import { BASE_URL } from '@/lib/constants';
 import { cn } from '@/lib/utils';
 import { Analytics } from '@vercel/analytics/next';
 import type { Metadata, Viewport } from 'next';
 import dynamic from 'next/dynamic';
-import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
 
 import './globals.css';
-
-const inter = Inter({ subsets: ['latin'] });
-
-const defaultUrl = process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : 'http://localhost:8080';
 
 export const viewport: Viewport = {
     viewportFit: 'cover',
@@ -25,7 +19,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-    metadataBase: new URL(defaultUrl),
+    metadataBase: new URL(BASE_URL),
     title: {
         default: 'SAP Hub',
         template: '%s | SAP Hub',
@@ -85,10 +79,10 @@ export default function SiteRootLayout({
                     <Header />
                     {children}
                     {modal}
-                    {/* <SiteBackground /> */}
+                    <SiteBackground />
                     <Footer />
                     <Toaster richColors />
-                    {/* <Analytics /> */}
+                    <Analytics />
                 </ThemeProvider>
             </body>
         </html>

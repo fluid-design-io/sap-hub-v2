@@ -6,6 +6,7 @@ import React from 'react';
 export const EditPackButton = () => {
     const { user, pack } = useUserPack();
     if (!user) return null;
+    if (user.id !== pack.user_id) return null;
     return (
         <PackEditor
             defaultValues={{

@@ -56,7 +56,7 @@ export const foodMismatches = {
     'Water of Youth': 'YouthWater',
     Cherry: 'Cherries',
     Cupcake: 'Not found',
-    Rice: 'Riceball',
+    Rice: 'RiceBall',
     'Sleeping Pill': 'Pill',
     'Just-Right Porridge': 'JustRightPorridge',
     Lettuce: 'Salad',

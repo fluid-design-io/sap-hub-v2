@@ -5,10 +5,8 @@ import { promises as fs } from 'fs';
 import React from 'react';
 
 async function UpdatePage() {
-    const data = await fs.readFile(
-        process.cwd() + '/public/data/rebalance.txt',
-        'utf8',
-    );
+    const fileUrl = process.cwd() + '/public/data/rebalance.txt';
+    const data = await fs.readFile(fileUrl, 'utf-8');
     return (
         <Container>
             <PageHeader title="Updates" subtitle="What's new in the game" />
