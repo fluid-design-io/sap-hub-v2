@@ -87,7 +87,7 @@ export default function SiteRootLayout({
                     {modal}
                     {/* <SiteBackground /> */}
                     <Footer />
-                    {/* <Toaster richColors /> */}
+                    <Toaster richColors />
                     {/* <Analytics /> */}
                 </ThemeProvider>
             </body>
