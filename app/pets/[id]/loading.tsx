@@ -6,7 +6,7 @@ export default function Loading() {
             <Skeleton className="aspect-[4/2.5] w-full max-w-lg" />
             <Skeleton className="mx-auto h-12 w-32" />
             <div className="w-full max-w-2xl flex-1 px-6">
-                <Skeleton className="h-64 w-full lg:h-48" />
+                <Skeleton className="h-64 w-full lg:h-52" />
             </div>
         </div>
     );
