@@ -41,6 +41,8 @@ export default function SignUp({
                             className="mb-6 rounded-md border bg-inherit px-4 py-2"
                             name="name"
                             placeholder="John"
+                            type="text"
+                            autoComplete="name"
                         />
                         <label className="text-md" htmlFor="email">
                             Email
@@ -49,6 +51,8 @@ export default function SignUp({
                             className="mb-6 rounded-md border bg-inherit px-4 py-2"
                             name="email"
                             placeholder="you@example.com"
+                            type="email"
+                            autoComplete="email"
                             required
                         />
                         <label className="text-md" htmlFor="password">
@@ -59,6 +63,7 @@ export default function SignUp({
                             type="password"
                             name="password"
                             placeholder="••••••••"
+                            autoComplete="new-password"
                             required
                         />
 

@@ -21,7 +21,6 @@ type PetDetailProps = {
 const dice = [Dice1, Dice2, Dice3, Dice4, Dice5, Dice6];
 
 async function Detail({ id, imageClassName }: PetDetailProps) {
-    await new Promise((resolve) => setTimeout(resolve, 2000));
     const supabase = createClient();
     const { data: pet } = await supabase
         .from('pets')
