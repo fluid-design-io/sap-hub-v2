@@ -1,6 +1,8 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import Container from '@/components/ui/container';
+import { cn } from '@/lib/utils';
+import { ChevronLeft } from 'lucide-react';
 import Link from 'next/link';
 
 import { signIn } from '../actions';
@@ -12,28 +14,18 @@ export default function Login({
 }) {
     return (
         <Container>
-            <Link
-                href="/"
-                className="bg-btn-background hover:bg-btn-background-hover group absolute left-8 top-8 flex items-center rounded-md px-4 py-2 text-sm text-foreground no-underline"
-            >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1"
+            <Card className="relative my-12 w-full max-w-sm">
+                <Link
+                    href="/"
+                    className={cn(
+                        'group',
+                        'size-8 rotate-[-4.5deg] rounded-md border-2 border-black bg-white text-black',
+                        'absolute -left-3.5 -top-3.5 flex items-center justify-center',
+                    )}
                 >
-                    <polyline points="15 18 9 12 15 6" />
-                </svg>
-                Back
-            </Link>
-
-            <Card className="my-12 w-full max-w-sm">
+                    <ChevronLeft className="size-5 transition-transform group-hover:-translate-x-1" />
+                    <span className="sr-only">Back</span>
+                </Link>
                 <CardHeader className="text-card-foreground">
                     Sign In
                 </CardHeader>
