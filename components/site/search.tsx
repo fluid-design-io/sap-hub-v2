@@ -108,12 +108,26 @@ export function Search({
         loadPagefind();
     }, []);
 
+    // cmd+k to toggle search
+    useEffect(() => {
+        function handleKeyDown(event: KeyboardEvent) {
+            if (event.key === 'k' && (event.metaKey || event.ctrlKey)) {
+                event.preventDefault();
+                setOpen((prev) => !prev);
+            }
+        }
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, []);
+
     if (isDesktop) {
         return (
             <Popover open={open} onOpenChange={setOpen}>
-                <PopoverTrigger asChild>
-                    <SearchButton variant={variant} setOpen={setOpen} />
-                </PopoverTrigger>
+                <SearchButton
+                    as={PopoverTrigger}
+                    variant={variant}
+                    setOpen={setOpen}
+                />
                 <PopoverContent className="w-[300px] p-0" align="start">
                     <SearchResultList
                         value={query}
@@ -125,45 +139,51 @@ export function Search({
         );
     }
     return (
-        <>
-            <Drawer open={open} onOpenChange={setOpen}>
-                <DrawerTrigger asChild>
-                    <SearchButton variant={variant} setOpen={setOpen} />
-                </DrawerTrigger>
-                <DrawerContent className="min-h-96">
-                    <div className="mt-4 border-t">
-                        <SearchResultList
-                            value={query}
-                            onValudChange={handleSearch}
-                            results={results}
-                        />
-                    </div>
-                </DrawerContent>
-            </Drawer>
-        </>
+        <Drawer open={open} onOpenChange={setOpen}>
+            <SearchButton
+                as={DrawerTrigger}
+                variant={variant}
+                setOpen={setOpen}
+            />
+
+            <DrawerContent className="min-h-96">
+                <div className="mt-4 border-t">
+                    <SearchResultList
+                        value={query}
+                        onValudChange={handleSearch}
+                        results={results}
+                    />
+                </div>
+            </DrawerContent>
+        </Drawer>
     );
 }
 
 const SearchButton = ({
     variant,
     setOpen,
+    as,
 }: {
     variant: 'link' | 'default';
     setOpen: (value: boolean) => void;
+    as: any;
 }) => {
+    const Comp = as;
     return (
-        <Button
-            onClick={() => setOpen(true)}
-            title="⌘K"
-            variant={variant}
-            className={cn('flex items-center gap-2', {
-                'h-auto p-0 font-bold text-[hsl(var(--header-foreground))]':
-                    variant === 'link',
-            })}
-        >
-            <SearchIcon className="size-5 lg:size-4" strokeWidth={3} />
-            <span className="hidden sm:block">Search</span>
-        </Button>
+        <Comp asChild>
+            <Button
+                onClick={() => setOpen(true)}
+                title="⌘K"
+                variant={variant}
+                className={cn('flex items-center gap-2', {
+                    'h-auto p-0 font-bold text-[hsl(var(--header-foreground))]':
+                        variant === 'link',
+                })}
+            >
+                <SearchIcon className="size-5 lg:size-4" strokeWidth={3} />
+                <span className="hidden sm:block">Search</span>
+            </Button>
+        </Comp>
     );
 };
 

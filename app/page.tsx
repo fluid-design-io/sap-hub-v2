@@ -8,6 +8,7 @@ import { packFilters } from '@/lib/filters';
 import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 
+import FilterBar from './filter-bar';
 import SpotlightCarousel from './spotlight-carousel';
 
 const CreatePack = dynamic(() => import('@/components/site/pack/pack-editor'), {
@@ -24,9 +25,9 @@ export default async function Index({
             <PageHeader title="SAP Hub" subtitle="Share. Learn. Advance." />
             <SpotlightCarousel />
             <div className="-mx-6 flex max-w-[min(50rem,calc(100%+3rem))] items-center justify-between gap-6 overflow-hidden">
-                {/* <Suspense fallback={<Loading />}>
+                <Suspense fallback={<Loading />}>
                     <FilterBar filters={packFilters} />
-                </Suspense> */}
+                </Suspense>
                 <CreatePack />
             </div>
             <Suspense fallback={<Loading />}>

@@ -11,26 +11,36 @@ import {
 export type PaginationProps = {
     currentPage: number;
     totalPages: number;
+    searchParams?: Record<string, string>;
 };
 
-const SitePagination = ({ currentPage, totalPages }: PaginationProps) => {
+const SitePagination = ({
+    currentPage,
+    totalPages,
+    searchParams,
+}: PaginationProps) => {
     const renderPageNumbers = () => {
         let components = [];
-
+        // combine the searchParams with the page number
+        const searchStr = searchParams
+            ? new URLSearchParams(searchParams).toString() + '&'
+            : '';
         if (currentPage > 1) {
             components.push(
                 <PaginationItem key="prev">
-                    <PaginationPrevious href={`?page=${currentPage - 1}`} />
+                    <PaginationPrevious
+                        href={`?${searchStr}page=${currentPage - 1}`}
+                    />
                 </PaginationItem>,
             );
         }
 
         if (currentPage <= 3) {
-            components.push(renderPageItem(1));
+            components.push(renderPageItem(1, searchStr));
         }
         // Always show the first page
         if (currentPage > 3) {
-            components.push(renderPageItem(1));
+            components.push(renderPageItem(1, searchStr));
             components.push(
                 <PaginationItem key="ellipsis1">
                     <PaginationEllipsis />
@@ -42,7 +52,7 @@ const SitePagination = ({ currentPage, totalPages }: PaginationProps) => {
         const startPage = Math.max(2, currentPage - 1);
         const endPage = Math.min(totalPages, currentPage + 1);
         for (let i = startPage; i <= endPage; i++) {
-            components.push(renderPageItem(i));
+            components.push(renderPageItem(i, searchStr));
         }
 
         // Always show the last page
@@ -52,13 +62,15 @@ const SitePagination = ({ currentPage, totalPages }: PaginationProps) => {
                     <PaginationEllipsis />
                 </PaginationItem>,
             );
-            components.push(renderPageItem(totalPages));
+            components.push(renderPageItem(totalPages, searchStr));
         }
 
         if (currentPage < totalPages) {
             components.push(
                 <PaginationItem key="next">
-                    <PaginationNext href={`?page=${currentPage + 1}`} />
+                    <PaginationNext
+                        href={`?${searchStr}page=${currentPage + 1}`}
+                    />
                 </PaginationItem>,
             );
         }
@@ -66,7 +78,7 @@ const SitePagination = ({ currentPage, totalPages }: PaginationProps) => {
         return components;
     };
 
-    const renderPageItem = (pageNumber: number) => (
+    const renderPageItem = (pageNumber: number, search: string) => (
         <PaginationItem
             key={pageNumber}
             className={
@@ -74,7 +86,7 @@ const SitePagination = ({ currentPage, totalPages }: PaginationProps) => {
             }
         >
             <PaginationLink
-                href={`?page=${pageNumber}`}
+                href={`?${search}page=${pageNumber}`}
                 aria-label={`Go to page ${pageNumber}`}
             >
                 {pageNumber}

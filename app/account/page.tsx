@@ -11,7 +11,7 @@ import { signOut } from '../(auth)/actions';
 
 function AccountPage({ user }: { user: User }) {
     return (
-        <Container>
+        <Container className="max-w-full overflow-x-auto">
             <PageHeader title="Account" />
             <form action={signOut}>
                 <Button

@@ -28,6 +28,9 @@ export function extractExistingParams(searchParams: ReadonlyURLSearchParams) {
  * Append a value to an existing parameter
  * If the parameter does not exist, it is created
  * If the value already exists, it is removed
+ *
+ * **Note:** It also removes `page` from searchParams to avoid fetching *out of range* data
+ *
  * Eg:
  * ?filter=1&a=not-changed
  * createQueryFilter('filter', '2') => ?filter=1,2&a=not-changed
@@ -62,5 +65,7 @@ export function createQueryFilter(
     } else {
         existingParams[key] = [value];
     }
+    // remove page from searchParams
+    delete existingParams['page'];
     return new URLSearchParams(existingParams).toString();
 }
