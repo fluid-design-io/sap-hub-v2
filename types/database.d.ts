@@ -301,6 +301,39 @@ export interface Database {
         }
         Relationships: []
       }
+      tutorials: {
+        Row: {
+          body: Json | null
+          cover_image: string | null
+          created_at: string
+          id: string
+          is_published: boolean
+          published_at: string | null
+          slug: string
+          title: string
+        }
+        Insert: {
+          body?: Json | null
+          cover_image?: string | null
+          created_at?: string
+          id?: string
+          is_published?: boolean
+          published_at?: string | null
+          slug: string
+          title: string
+        }
+        Update: {
+          body?: Json | null
+          cover_image?: string | null
+          created_at?: string
+          id?: string
+          is_published?: boolean
+          published_at?: string | null
+          slug?: string
+          title?: string
+        }
+        Relationships: []
+      }
       users: {
         Row: {
           avatar_url: string | null

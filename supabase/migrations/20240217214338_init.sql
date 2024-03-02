@@ -101,6 +101,18 @@ create table "public"."packs" (
     "code" jsonb not null
 );
 
+create table "public"."tutorials" (
+    "id" uuid not null default uuid_generate_v4(),
+    "created_at" timestamp with time zone not null default now(),
+    "title" text not null,
+    "body" jsonb,
+    "cover_image" text,
+    "slug" text not null,
+    "published_at" timestamp with time zone default now(),
+    "is_published" boolean not null default false,
+    "user_id" uuid not null default auth.uid()
+);
+
 alter table "public"."packs" enable row level security;
 
 alter table "public"."users" enable row level security;
@@ -128,6 +140,10 @@ CREATE UNIQUE INDEX daily_spotlight_pkey ON public.daily_spotlight USING btree (
 CREATE UNIQUE INDEX profiles_pkey ON public.users USING btree (id);
 
 CREATE UNIQUE INDEX packs_pkey ON public.packs USING btree (id);
+
+CREATE UNIQUE INDEX tutorials_pkey ON public.tutorials USING btree (id);
+
+CREATE UNIQUE INDEX tutorials_slug_key ON public.tutorials USING btree (slug);
 
 alter table "public"."food" add constraint "food_pkey" PRIMARY KEY using index "food_pkey";
 
@@ -168,6 +184,14 @@ alter table "public"."packs" add constraint "packs_pkey" PRIMARY KEY using index
 alter table "public"."packs" add constraint "packs_user_id_fkey" FOREIGN KEY (user_id) REFERENCES users(id) ON UPDATE CASCADE ON DELETE CASCADE not valid;
 
 alter table "public"."packs" validate constraint "packs_user_id_fkey";
+
+alter table "public"."tutorials" add constraint "tutorials_pkey" PRIMARY KEY using index "tutorials_pkey";
+
+alter table "public"."tutorials" add constraint "tutorials_slug_key" UNIQUE using index "tutorials_slug_key";
+
+alter table "public"."tutorials" add constraint "tutorials_user_id_fkey" FOREIGN KEY (user_id) REFERENCES users(id) ON UPDATE CASCADE ON DELETE CASCADE not valid;
+
+alter table "public"."tutorials" validate constraint "tutorials_user_id_fkey";
 
 grant delete on table "public"."food" to "anon";
 
@@ -421,6 +445,48 @@ grant truncate on table "public"."packs" to "service_role";
 
 grant update on table "public"."packs" to "service_role";
 
+grant delete on table "public"."tutorials" to "anon";
+
+grant insert on table "public"."tutorials" to "anon";
+
+grant references on table "public"."tutorials" to "anon";
+
+grant select on table "public"."tutorials" to "anon";
+
+grant trigger on table "public"."tutorials" to "anon";
+
+grant truncate on table "public"."tutorials" to "anon";
+
+grant update on table "public"."tutorials" to "anon";
+
+grant delete on table "public"."tutorials" to "authenticated";
+
+grant insert on table "public"."tutorials" to "authenticated";
+
+grant references on table "public"."tutorials" to "authenticated";
+
+grant select on table "public"."tutorials" to "authenticated";
+
+grant trigger on table "public"."tutorials" to "authenticated";
+
+grant truncate on table "public"."tutorials" to "authenticated";
+
+grant update on table "public"."tutorials" to "authenticated";
+
+grant delete on table "public"."tutorials" to "service_role";
+
+grant insert on table "public"."tutorials" to "service_role";
+
+grant references on table "public"."tutorials" to "service_role";
+
+grant select on table "public"."tutorials" to "service_role";
+
+grant trigger on table "public"."tutorials" to "service_role";
+
+grant truncate on table "public"."tutorials" to "service_role";
+
+grant update on table "public"."tutorials" to "service_role";
+
 create policy "Enable read access for all users"
 on "public"."food"
 as permissive
@@ -469,6 +535,23 @@ with check ((auth.uid() = user_id));
 
 create policy "Enable read access for all users"
 on "public"."packs"
+as permissive
+for select
+to public
+using (true);
+
+
+create policy "Enable CRUD for users based on user_id"
+on "public"."tutorials"
+as permissive
+for all
+to authenticated
+using ((auth.uid() = user_id))
+with check ((auth.uid() = user_id));
+
+
+create policy "Enable read access for all users"
+on "public"."tutorials"
 as permissive
 for select
 to public
