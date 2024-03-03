@@ -151,25 +151,6 @@
 }
 
 @layer components {
-    /* ----- START BUTTON ------ */
-    .btn-border {
-        box-shadow:
-            0px 0.05rem 0px 0.175rem #fff,
-            0px -0.075rem 0px 0.35rem #000 inset;
-    }
-    .btn-border-primary {
-        box-shadow:
-            0px -0.05rem 0px 0.175rem #fff inset,
-            0px -0.075rem 0px 0.35rem #000 inset,
-            0px -0.4rem 0px 0.35rem #db5325 inset;
-    }
-    .btn-border-primary:active {
-        box-shadow:
-            0px -0.05rem 0px 0.175rem #fff inset,
-            0px -0.075rem 0px 0.35rem #000 inset,
-            0px -0.275rem 0px 0.35rem #db5325 inset;
-    }
-    /* ----- END BUTTON ------ */
     .subtitle {
         @apply text-xl !text-secondary md:text-2xl;
         text-shadow:
