@@ -15,6 +15,8 @@ import * as React from 'react';
 import { toast } from 'sonner';
 import * as z from 'zod';
 
+import { reservedSlugs } from './reserved-slug';
+
 function CreateTutorialButton() {
     const router = useRouter();
     const [open, setOpen] = React.useState(false);
@@ -37,6 +39,14 @@ function CreateTutorialButton() {
         form: FormReturnType<typeof fieldsConfig>['form'],
     ) {
         setLoading(true);
+        // 3. Disallow reserved slugs.
+        if (reservedSlugs.includes(values.slug)) {
+            form.setError('slug', {
+                message: 'This slug is reserved.',
+            });
+            setLoading(false);
+            return;
+        }
         try {
             await createTutorial({
                 slug: values.slug,

@@ -12,7 +12,7 @@ async function TutorialsList() {
         .throwOnError();
     if (!tutorials || tutorials.length === 0) return <p>No tutorials found</p>;
     return (
-        <ul className="flex w-full flex-col gap-6">
+        <ul className="grid w-full gap-6 sm:grid-cols-2 md:grid-cols-3">
             {tutorials.map(({ slug, title, id }) => (
                 <li key={id}>
                     <Card>

@@ -48,10 +48,11 @@ const EditorBlock = ({ data, onChange, holder, className, options }: Props) => {
         <article
             id={holder}
             className={cn(
+                'no-tw-preflight',
                 'max-w-full',
                 'selection:bg-cyan-400 selection:text-cyan-950',
                 '*:border-border',
-                'prose-invert',
+                'prose',
                 className,
             )}
         />

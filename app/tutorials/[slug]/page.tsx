@@ -38,9 +38,9 @@ async function TutorialPage({ params: { slug } }: TutorialPageProps) {
                     <ChevronLeft className="size-5 transition-transform group-hover:-translate-x-1" />
                     <span className="sr-only">Back</span>
                 </Link>
-                <CardContent className="min-h-[400px]">
+                <CardContent className="prose min-h-[400px]">
                     {tutorial.body ? (
-                        <Renderer blocks={tutorial.body as any} />
+                        <Renderer blocks={(tutorial.body as any)?.blocks} />
                     ) : (
                         <div className="flex flex-col items-center justify-center text-card-foreground">
                             <BoxSelect className="mb-4 size-8" />

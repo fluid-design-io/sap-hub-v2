@@ -1,3 +1,4 @@
+//@ts-nocheck
 import Code from '@editorjs/code';
 import { EditorConfig } from '@editorjs/editorjs';
 import Header from '@editorjs/header';

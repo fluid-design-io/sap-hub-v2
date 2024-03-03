@@ -3,8 +3,6 @@ import dynamic from 'next/dynamic';
 import { useFormContext } from 'react-hook-form';
 import * as z from 'zod';
 
-import { ScrollArea } from '@ui/scroll-area';
-
 import { BaseAssetConfig } from '../types';
 
 const EditorBlock = dynamic(() => import('@/components/editor/editor'), {

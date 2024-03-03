@@ -10,20 +10,24 @@ import { useState } from 'react';
 import { toast } from 'sonner';
 import * as z from 'zod';
 
+import { save } from './actions';
 import Editor from './editor';
+import TutorialEditorToolbar from './editor-toolbar';
+import FormTitle from './form-title';
+import TutorialSidebar from './sidebar';
 
 export const fieldsConfig = {
     id: fields.text({}),
     title: fields.slug({
         label: 'Title',
-        placeholder: 'New Blog...',
-        description: 'Title of the blog post.',
+        placeholder: 'New Tutorial...',
+        description: 'Title of the tutorial post.',
         validation: z
             .string()
             .min(2, { message: 'Title must be at least 2 characters.' }),
     }),
     cover_image: fields.image({
-        storageBucket: 'blog',
+        storageBucket: 'tutorials',
         description: 'This image will be used as the cover image for the post.',
         className: 'aspect-[3/2]',
     }),
@@ -46,7 +50,7 @@ function TutorialForm({ tutorial }: { tutorial: Tables<'tutorials'> }) {
         setLoading(true);
         await new Promise((resolve) => setTimeout(resolve, 200));
         try {
-            //   await save(values)
+            await save(values);
             toast.success(`Updated blog ${values.title}!`);
             form.clearErrors();
             form.reset(values);
@@ -68,15 +72,19 @@ function TutorialForm({ tutorial }: { tutorial: Tables<'tutorials'> }) {
             fieldsConfig={fieldsConfig}
             loading={loading}
             onSubmit={(values, form) => onSubmit(values, form)}
-            // defaultValues={tutorial}
+            defaultValues={tutorial as any}
             renderForm={false}
         >
-            <Container className="w-full max-w-4xl">
+            <FormTitle />
+            <TutorialEditorToolbar />
+            <Container className="flex flex-1 flex-col-reverse lg:flex-row lg:items-start">
                 <Card className="relative w-full">
-                    <CardContent className="min-h-[400px]">
+                    <CardContent className="min-h-[400px] text-card-foreground">
+                        {JSON.stringify(tutorial, null, 2)}
                         <Editor />
                     </CardContent>
                 </Card>
+                <TutorialSidebar />
             </Container>
         </Form>
     );

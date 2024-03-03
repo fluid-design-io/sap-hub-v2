@@ -42,7 +42,7 @@ export const Image: React.FC<TextInputProps> = ({
     name,
     label,
     description,
-    storageBucket = 'public_contents',
+    storageBucket = 'tutorials',
     path = '',
     placeholder,
     control,
