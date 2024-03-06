@@ -32,6 +32,75 @@ export interface Database {
       [_ in never]: never
     }
   }
+  passkey: {
+    Tables: {
+      authenticators: {
+        Row: {
+          counter: number
+          created_at: string | null
+          credential_backed_up: boolean
+          credential_device_type: Database["public"]["Enums"]["credential_device_type"]
+          credential_id: string
+          credential_public_key: string
+          friendly_name: string | null
+          metadata: Json | null
+          transports:
+            | Database["public"]["Enums"]["authenticator_transport"][]
+            | null
+          user_id: string
+        }
+        Insert: {
+          counter: number
+          created_at?: string | null
+          credential_backed_up: boolean
+          credential_device_type: Database["public"]["Enums"]["credential_device_type"]
+          credential_id: string
+          credential_public_key: string
+          friendly_name?: string | null
+          metadata?: Json | null
+          transports?:
+            | Database["public"]["Enums"]["authenticator_transport"][]
+            | null
+          user_id: string
+        }
+        Update: {
+          counter?: number
+          created_at?: string | null
+          credential_backed_up?: boolean
+          credential_device_type?: Database["public"]["Enums"]["credential_device_type"]
+          credential_id?: string
+          credential_public_key?: string
+          friendly_name?: string | null
+          metadata?: Json | null
+          transports?:
+            | Database["public"]["Enums"]["authenticator_transport"][]
+            | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "authenticators_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          }
+        ]
+      }
+    }
+    Views: {
+      [_ in never]: never
+    }
+    Functions: {
+      [_ in never]: never
+    }
+    Enums: {
+      [_ in never]: never
+    }
+    CompositeTypes: {
+      [_ in never]: never
+    }
+  }
   public: {
     Tables: {
       daily_spotlight: {
@@ -311,6 +380,7 @@ export interface Database {
           published_at: string | null
           slug: string
           title: string
+          user_id: string
         }
         Insert: {
           body?: Json | null
@@ -321,6 +391,7 @@ export interface Database {
           published_at?: string | null
           slug: string
           title: string
+          user_id?: string
         }
         Update: {
           body?: Json | null
@@ -331,12 +402,22 @@ export interface Database {
           published_at?: string | null
           slug?: string
           title?: string
+          user_id?: string
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "tutorials_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          }
+        ]
       }
       users: {
         Row: {
           avatar_url: string | null
+          current_challenge: string
           email: string | null
           full_name: string | null
           id: string
@@ -345,6 +426,7 @@ export interface Database {
         }
         Insert: {
           avatar_url?: string | null
+          current_challenge?: string
           email?: string | null
           full_name?: string | null
           id: string
@@ -353,6 +435,7 @@ export interface Database {
         }
         Update: {
           avatar_url?: string | null
+          current_challenge?: string
           email?: string | null
           full_name?: string | null
           id?: string
@@ -387,6 +470,8 @@ export interface Database {
       }
     }
     Enums: {
+      authenticator_transport: "usb" | "ble" | "nfc" | "internal" | "hybrid"
+      credential_device_type: "singleDevice" | "multiDevice"
       overview_archetype:
         | "Mana"
         | "Diva"
