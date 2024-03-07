@@ -22,7 +22,7 @@ export function ModeToggle({
 }) {
     const { setTheme, theme } = useTheme();
     return (
-        <DropdownMenu>
+        <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
                 <Button
                     variant="secondary"
