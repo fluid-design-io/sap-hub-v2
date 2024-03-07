@@ -2,10 +2,10 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import Container from '@/components/ui/container';
 import { cn } from '@/lib/utils';
-import { ChevronLeft } from 'lucide-react';
+import { ChevronLeft, MailIcon } from 'lucide-react';
 import Link from 'next/link';
 
-import { signIn } from '../actions';
+import LoginWithPasskey from './passkey/login-with-passkey';
 
 export default function Login({
     searchParams,
@@ -26,37 +26,19 @@ export default function Login({
                     <ChevronLeft className="size-5 transition-transform group-hover:-translate-x-1" />
                     <span className="sr-only">Back</span>
                 </Link>
-                <CardHeader className="text-card-foreground">
-                    Sign In
-                </CardHeader>
+                <CardHeader className="text-card-foreground">Login</CardHeader>
                 <CardContent>
-                    <form
-                        className="flex w-full flex-1 flex-col justify-center gap-2 text-card-foreground animate-in"
-                        action={signIn}
-                    >
-                        <label className="text-md" htmlFor="email">
-                            Email
-                        </label>
-                        <input
-                            className="mb-6 rounded-md border bg-inherit px-4 py-2"
-                            name="email"
-                            placeholder="you@example.com"
-                            type="email"
-                            autoComplete="email"
-                            required
-                        />
-                        <label className="text-md" htmlFor="password">
-                            Password
-                        </label>
-                        <input
-                            className="mb-6 rounded-md border bg-inherit px-4 py-2"
-                            type="password"
-                            name="password"
-                            placeholder="••••••••"
-                            autoComplete="current-password"
-                            required
-                        />
-                        <Button>Sign In</Button>
+                    <div className="flex w-full flex-1 flex-col justify-center gap-2 text-card-foreground animate-in">
+                        <LoginWithPasskey />
+                        <Button asChild>
+                            <Link
+                                href="/login/email"
+                                className="flex items-center gap-2"
+                            >
+                                <MailIcon className="size-4" />
+                                Continue with Email
+                            </Link>
+                        </Button>
                         <Button
                             variant="link"
                             className="text-card-foreground"
@@ -64,12 +46,7 @@ export default function Login({
                         >
                             <Link href="/signup">Sign Up</Link>
                         </Button>
-                        {searchParams?.message && (
-                            <p className="mt-4 bg-foreground/10 p-4 text-center text-foreground">
-                                {searchParams.message}
-                            </p>
-                        )}
-                    </form>
+                    </div>
                 </CardContent>
             </Card>
         </Container>
