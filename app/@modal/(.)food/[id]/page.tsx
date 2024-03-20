@@ -2,6 +2,7 @@ import Loading from '@/app/food/[id]/loading';
 import Detail from '@/app/food/detail';
 import Modal from '@/components/site/intercept-modal';
 import food from '@/public/data/food.json';
+import { createClient } from '@/utils/supabase/server';
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
 
@@ -19,4 +20,11 @@ export default async function FoodModal({
             </Suspense>
         </Modal>
     );
+}
+
+export async function generateStaticParams() {
+    const supabase = createClient();
+    const { data: pets } = await supabase.from('food').select('id');
+    if (!pets) return [];
+    return pets.map(({ id }) => ({ id }));
 }
