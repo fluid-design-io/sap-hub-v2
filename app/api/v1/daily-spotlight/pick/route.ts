@@ -11,14 +11,7 @@ export async function GET(req: Request) {
         });
     }
     const supabase = createClient();
-    const { error } = await supabase.rpc('gen_spotlight_items');
-    console.log(`cron job ran at ${new Date().toISOString()}`);
-    if (error) {
-        return Response.json({
-            success: false,
-            message: error.message,
-        });
-    }
+    await supabase.rpc('gen_spotlight_items').select().throwOnError();
     return Response.json({
         success: true,
     });
