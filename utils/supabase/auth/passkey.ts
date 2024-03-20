@@ -6,23 +6,28 @@ import {
     MetadataService,
     generateAuthenticationOptions,
     generateRegistrationOptions,
+    verifyAuthenticationResponse,
     verifyRegistrationResponse,
 } from '@simplewebauthn/server';
 import { isoBase64URL, isoUint8Array } from '@simplewebauthn/server/helpers';
-import { RegistrationResponseJSON } from '@simplewebauthn/types';
+import {
+    AuthenticationResponseJSON,
+    RegistrationResponseJSON,
+} from '@simplewebauthn/types';
+import jwt from 'jsonwebtoken';
 import { revalidatePath } from 'next/cache';
 import { cookies } from 'next/headers';
 
 import { createClient } from '../server';
 import { origin, rpID, rpName } from './constants';
-import { getUserAuthenticators } from './helpers';
+import { getUserAuthenticator, getUserAuthenticators } from './helpers';
 import { Authenticator } from './types';
 
 export type PasskeyUser = {
     credential_id: string;
     credential_device_type: 'singleDevice' | 'multiDevice';
-    transports: ('usb' | 'ble' | 'nfc' | 'internal' | 'hybrid')[] | null;
-    created_at: string | null;
+    transports: Tables<{ schema: 'passkey' }, 'authenticators'>['transports'];
+    last_used: string | null;
     friendly_name: string | null;
 };
 
@@ -36,7 +41,7 @@ export const getUserPasskey = async (): Promise<PasskeyUser[] | null> => {
         .schema('passkey')
         .from('authenticators')
         .select(
-            'credential_id, credential_device_type, transports, created_at, friendly_name',
+            'credential_id, credential_device_type, transports, last_used, friendly_name',
         )
         .match({ user_id: userId });
     if (error) {
@@ -193,7 +198,10 @@ export const verifyRegistration = async (
             console.log(`---------------------\n\n`);
             console.error(error);
         }
-        const newAuthenticator: Omit<Authenticator, 'created_at'> = {
+        const newAuthenticator: Omit<
+            Authenticator,
+            'last_used' | 'created_at'
+        > = {
             credential_public_key:
                 Buffer.from(credentialPublicKey).toString('base64url'),
             // encode to base64url
@@ -201,7 +209,7 @@ export const verifyRegistration = async (
             counter,
             credential_device_type: credentialDeviceType,
             credential_backed_up: credentialBackedUp,
-            transports: attRest?.response?.transports,
+            transports: attRest?.response?.transports || [],
             user_id: user.id,
             metadata: metadata || null,
             friendly_name: attRest?.friendly_name || null,
@@ -211,7 +219,7 @@ export const verifyRegistration = async (
             .from('authenticators')
             .insert(newAuthenticator)
             .select(
-                'created_at, credential_id, credential_device_type, transports, friendly_name',
+                'last_used, credential_id, credential_device_type, transports, friendly_name',
             )
             .single()
             .throwOnError();
@@ -227,6 +235,8 @@ export const verifyRegistration = async (
     return { passkey };
 };
 
+/* Login Functions */
+
 export const requestAuthOptions = async () => {
     const options = await generateAuthenticationOptions({
         rpID,
@@ -240,4 +250,151 @@ export const requestAuthOptions = async () => {
         httpOnly: true,
     });
     return options;
+};
+
+export const verifyAuthentication = async (
+    asseResp: AuthenticationResponseJSON,
+) => {
+    const current_challenge = cookies().get('current_challenge')?.value;
+    if (!current_challenge) {
+        console.error(`No current challenge found`);
+        throw new Error('No current challenge found');
+    }
+    const supabase = createClient();
+    const supabaseAdmin = createAdminClient();
+
+    const { data: userIdData } = await supabaseAdmin
+        .schema('passkey')
+        .from('authenticators')
+        .select('user_id')
+        .match({
+            credential_id: asseResp.rawId,
+        })
+        .maybeSingle()
+        .throwOnError();
+
+    if (!userIdData?.user_id) {
+        console.error(`No user id found`);
+        throw new Error('No user id found');
+    }
+    // get the user profile
+    const { data: userData } = await supabase
+        .from('users')
+        .select('id, username, email')
+        .match({ id: userIdData.user_id })
+        .single()
+        .throwOnError();
+    if (!userData?.email || !userData?.id) {
+        console.error(`No email or id found`);
+        throw new Error('No email or id found');
+    }
+    const { id, email } = userData;
+
+    const expectedChallenge = current_challenge;
+    const authenticator = await getUserAuthenticator(id, asseResp.id);
+    if (!authenticator) {
+        console.log(`🔵 Authenticator not found`);
+        throw new Error('Authenticator not found');
+    }
+    console.log(`✨✨✨✨`, {
+        expectedChallenge,
+        authenticator: {
+            counter: authenticator.counter,
+            credentialID: isoBase64URL.toBuffer(
+                authenticator.credential_id,
+                'base64url',
+            ),
+            credentialPublicKey: isoBase64URL.toBuffer(
+                authenticator.credential_public_key,
+                'base64url',
+            ),
+            transports: authenticator.transports || undefined,
+        },
+    });
+    let verification;
+    try {
+        verification = await verifyAuthenticationResponse({
+            response: asseResp,
+            expectedChallenge,
+            expectedOrigin: origin,
+            expectedRPID: rpID,
+            authenticator: {
+                counter: authenticator.counter,
+                credentialID: isoBase64URL.toBuffer(
+                    authenticator.credential_id,
+                    'base64url',
+                ),
+                credentialPublicKey: isoBase64URL.toBuffer(
+                    authenticator.credential_public_key,
+                    'base64url',
+                ),
+                transports: authenticator.transports || undefined,
+            },
+            requireUserVerification: true,
+        });
+    } catch (error) {
+        console.log(`---------------------\n\n`);
+        console.error(error);
+        throw error;
+    }
+    const { verified } = verification;
+    const { authenticationInfo } = verification;
+    const { newCounter } = authenticationInfo;
+
+    if (!verified || !authenticationInfo) {
+        console.error(`Not verified`);
+        throw new Error('Not verified');
+    }
+    const { error: insertAuthenticatorError } = await supabaseAdmin
+        .schema('passkey')
+        .from('authenticators')
+        .update({
+            counter: newCounter,
+        })
+        .match({ user_id: authenticator.user_id });
+
+    if (insertAuthenticatorError) {
+        console.log(`---------------------\n\n`);
+        console.error(insertAuthenticatorError);
+        throw insertAuthenticatorError;
+    }
+    // clear the current challenge
+    cookies().set('current_challenge', '', {
+        expires: new Date(0),
+        httpOnly: true,
+    });
+
+    //* Create JWT Token and set the session
+    const token = jwt.sign(
+        {
+            sub: id,
+            email: email,
+            iat: Math.floor(Date.now() / 1000),
+            role: 'authenticated',
+            aud: 'authenticated',
+            app_metadata: {
+                provider: 'passkey',
+            },
+        },
+        process.env.SUPABASE_JWT_SECRET!,
+        {
+            expiresIn: '1d',
+        },
+    );
+    await supabase.auth.setSession({
+        access_token: token,
+        refresh_token: token,
+    });
+
+    //* Update passkey record with last_used
+    await supabaseAdmin
+        .schema('passkey')
+        .from('authenticators')
+        .update({
+            last_used: new Date().toISOString(),
+        })
+        .match({ credential_id: authenticator.credential_id })
+        .throwOnError();
+
+    return { verified };
 };

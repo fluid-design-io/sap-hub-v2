@@ -18,8 +18,6 @@ to authenticated
 using ((auth.uid() = id))
 with check ((auth.uid() = id));
 
--- Start of the passkey schema
-
 create policy "Enable read access for all users"
 on "public"."users"
 as permissive
@@ -27,13 +25,16 @@ for select
 to public
 using (true);
 
+-- Start of the passkey schema
+
 CREATE TYPE "public"."authenticator_transport" AS ENUM (
     'usb',
     'ble',
     'cable',
     'nfc',
     'internal',
-    'hybrid'
+    'hybrid',
+    'smart-card'
 );
 
 ALTER TYPE "public"."authenticator_transport" OWNER TO "postgres";
@@ -58,6 +59,7 @@ CREATE TABLE IF NOT EXISTS "passkey"."authenticators" (
     "credential_id" text NOT NULL,
     "credential_public_key" text NOT NULL,
     "created_at" timestamp with time zone DEFAULT now(),
+    "last_used" timestamp with time zone DEFAULT now(),
     "metadata" jsonb,
     "friendly_name" text
 );
