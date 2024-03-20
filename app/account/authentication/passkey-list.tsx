@@ -1,6 +1,5 @@
 import PawskeyIcon from '@/components/icon/pawskey';
 import { getUserPasskey } from '@/utils/supabase/auth/passkey';
-import React from 'react';
 
 import PasskeyMenu from './passkey-menu';
 
@@ -16,7 +15,17 @@ async function PasskeyList() {
         const diff = now.getTime() - then.getTime();
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
         if (days === 0) {
-            return 'today';
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            if (hours === 0) {
+                const minutes = Math.floor(diff / (1000 * 60));
+                if (minutes === 0) {
+                    return 'just now';
+                }
+                if (minutes === 1) {
+                    return 'a minute ago';
+                }
+                return `${minutes} minutes ago`;
+            }
         }
         if (days === 1) {
             return 'yesterday';
@@ -39,7 +48,7 @@ async function PasskeyList() {
                                 {passkey.friendly_name || 'Unnamed passkey'}
                             </div>
                             <div className="md:min-w-[200px]">
-                                Connected {time(passkey.created_at || '')}
+                                Connected {time(passkey.last_used || '')}
                             </div>
                         </div>
                         <div>
