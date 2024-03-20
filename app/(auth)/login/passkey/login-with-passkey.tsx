@@ -16,14 +16,12 @@ import { Fragment, useEffect, useState } from 'react';
 import { toast } from 'sonner';
 
 function SignInWithWebAuthn() {
-    const [error, setError] = useState('');
     const [isAvailable, setIsAvailable] = useState(false);
     const [loading, setLoading] = useState(false);
     const [mounted, setMounted] = useState(false);
     const router = useRouter();
     const handleAuthentication = async () => {
         setLoading(true);
-        setError('');
         const options = await requestAuthOptions();
         let asseResp;
         try {
@@ -33,12 +31,11 @@ function SignInWithWebAuthn() {
         } catch (error: any) {
             console.error(error);
             setLoading(false);
-            setError(
+            toast.error(
                 'Error authenticating with your device, please check if you have registered it.',
             );
             return;
         }
-        console.log('asseResp', asseResp);
         try {
             try {
                 await verifyAuthentication(asseResp);
@@ -52,7 +49,7 @@ function SignInWithWebAuthn() {
         } catch (error) {
             console.error(error);
             setLoading(false);
-            setError(
+            toast.error(
                 'Error authenticating with your device, please check if you have registered it.',
             );
         } finally {
