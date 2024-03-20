@@ -121,9 +121,6 @@ dependencies:
   next-themes:
     specifier: ^0.3.0
     version: 0.3.0(react-dom@18.2.0)(react@18.2.0)
-  pagefind:
-    specifier: ^1.0.4
-    version: 1.0.4
   postcss:
     specifier: 8.4.37
     version: 8.4.37
@@ -192,6 +189,9 @@ devDependencies:
   eslint-config-next:
     specifier: ^14.1.1
     version: 14.1.1(eslint@8.57.0)(typescript@5.4.2)
+  pagefind:
+    specifier: ^1.0.4
+    version: 1.0.4
   prettier-plugin-tailwindcss:
     specifier: ^0.5.12
     version: 0.5.12(@trivago/prettier-plugin-sort-imports@4.3.0)(prettier@3.2.5)
@@ -652,7 +652,7 @@ packages:
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
-    dev: false
+    dev: true
     optional: true
 
   /@pagefind/darwin-x64@1.0.4:
@@ -660,7 +660,7 @@ packages:
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
-    dev: false
+    dev: true
     optional: true
 
   /@pagefind/linux-arm64@1.0.4:
@@ -668,7 +668,7 @@ packages:
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
-    dev: false
+    dev: true
     optional: true
 
   /@pagefind/linux-x64@1.0.4:
@@ -676,7 +676,7 @@ packages:
     cpu: [x64]
     os: [linux]
     requiresBuild: true
-    dev: false
+    dev: true
     optional: true
 
   /@pagefind/windows-x64@1.0.4:
@@ -684,7 +684,7 @@ packages:
     cpu: [x64]
     os: [win32]
     requiresBuild: true
-    dev: false
+    dev: true
     optional: true
 
   /@peculiar/asn1-android@2.3.10:
@@ -4014,7 +4014,7 @@ packages:
       '@pagefind/linux-arm64': 1.0.4
       '@pagefind/linux-x64': 1.0.4
       '@pagefind/windows-x64': 1.0.4
-    dev: false
+    dev: true
 
   /parent-module@1.0.1:
     resolution: {integrity: sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==}

@@ -11,7 +11,7 @@
     "build": "next build",
     "start": "next start -p 8080",
     "postbuild": "pagefind --site .next --output-path .next/static/chunks/app/pagefind",
-    "pagefind:local": "bun run build && cp -r .next/static/chunks/app/pagefind public/pagefind/",
+    "pagefind:local": "pnpm run build && cp -r .next/static/chunks/app/pagefind public/pagefind/",
     "update-types": "supabase gen types typescript --local > types/database.d.ts",
     "seed": "bun scripts/seed-sap-data.ts",
     "seed:remote": "NODE_ENV=production bun scripts/seed-sap-data.ts"
@@ -57,7 +57,6 @@
     "lucide-react": "^0.323.0",
     "next": "canary",
     "next-themes": "^0.3.0",
-    "pagefind": "^1.0.4",
     "postcss": "8.4.37",
     "react": "18.2.0",
     "react-day-picker": "^8.10.0",
@@ -81,6 +80,7 @@
     "@types/react-dom": "18.2.18",
     "encoding": "^0.1.13",
     "eslint": "^8.57.0",
+    "pagefind": "^1.0.4",
     "eslint-config-next": "^14.1.1",
     "prettier-plugin-tailwindcss": "^0.5.12",
     "tailwindcss-animated": "^1.0.1"
