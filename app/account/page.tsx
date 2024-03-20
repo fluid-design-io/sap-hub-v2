@@ -5,7 +5,7 @@ import Container from '@/components/ui/container';
 import withUser from '@/hooks/with-user/server';
 import { cn } from '@/lib/utils';
 import { User } from '@/types/types';
-import React from 'react';
+import Link from 'next/link';
 
 import { signOut } from '../(auth)/actions';
 
@@ -23,6 +23,9 @@ function AccountPage({ user }: { user: User }) {
                     Sign out
                 </Button>
             </form>
+            <Button asChild>
+                <Link href="/account/authentication">Authentications</Link>
+            </Button>
             <PackList userId={user.id} />
         </Container>
     );

@@ -5,7 +5,6 @@ import PasskeyMenu from './passkey-menu';
 
 async function PasskeyList() {
     const data = await getUserPasskey();
-    console.log(`🔵 PasskeyList`, { data });
     if (!data) {
         return <div>No passkeys found</div>;
     }
@@ -32,6 +31,13 @@ async function PasskeyList() {
         }
         return `${days} days ago`;
     };
+    if (data.length === 0) {
+        return (
+            <div>
+                No passkeys found, create one by clicking the button above.
+            </div>
+        );
+    }
     return (
         <ul className="text-card-foreground">
             {data.map((passkey) => (
