@@ -1,7 +1,7 @@
 import { PageHeader } from '@/components/site/page-header';
 import Container from '@/components/ui/container';
 import { Skeleton } from '@/components/ui/skeleton';
-import React, { Suspense } from 'react';
+import { Suspense } from 'react';
 
 import Toolbar from './toolbar';
 import TutorialsList from './tutorial-list';
@@ -10,7 +10,7 @@ function TutorialsPage() {
     return (
         <div>
             <PageHeader title="Tutorials" subtitle="Learn how to play" />
-            <Suspense fallback={null}>
+            <Suspense fallback={<></>}>
                 <Toolbar />
             </Suspense>
             <Container className="min-h-screen max-w-4xl">

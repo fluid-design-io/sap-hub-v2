@@ -13,7 +13,15 @@ async function MangeTutorialPage() {
         .from('tutorials')
         .select('id, title, slug')
         .throwOnError();
-    if (!tutorials || tutorials.length === 0) return <p>No tutorials found</p>;
+    if (!tutorials || tutorials.length === 0)
+        return (
+            <>
+                <PageHeader title="My Tutorials" />
+                <Container className="mx-auto max-w-4xl">
+                    <p>No tutorials found</p>
+                </Container>
+            </>
+        );
     return (
         <div>
             <PageHeader title="My Tutorials" />
