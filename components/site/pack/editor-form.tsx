@@ -40,9 +40,9 @@ const formSchema = z.object({
       message: "Title is too long",
     })
     .refine(
-      // can't include special characters, allow !?.-_ and space and …
+      // can't include special characters, allow !?.-_space& and …
       (value) => {
-        return !value.match(/[^a-zA-Z0-9 !?.-_…]/);
+        return !value.match(/[^a-zA-Z0-9 !?.-_…&]/);
       },
       {
         message: "Title can only contain letters and numbers",
