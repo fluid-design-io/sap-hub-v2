@@ -20,3 +20,8 @@ export default async function PetModal({
         </Modal>
     );
 }
+
+export async function generateStaticParams() {
+    if (!pets) return [];
+    return pets.map(({ Id: id }) => ({ id }));
+}

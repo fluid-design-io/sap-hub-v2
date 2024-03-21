@@ -2,7 +2,6 @@ import { PageHeader } from '@/components/site/page-header';
 import Container from '@/components/ui/container';
 import { getUrl } from '@/lib/get-item-public-url';
 import food from '@/public/data/food.json';
-import { createClient } from '@/utils/supabase/client';
 import { Metadata, ResolvingMetadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
@@ -28,10 +27,8 @@ export default async function PetPage({
 }
 
 export async function generateStaticParams() {
-    const supabase = createClient();
-    const { data: pets } = await supabase.from('food').select('id');
-    if (!pets) return [];
-    return pets.map(({ id }) => ({ id }));
+    if (!food) return [];
+    return food.map(({ Id: id }) => ({ id }));
 }
 
 type PageProps = {
@@ -44,18 +41,13 @@ export async function generateMetadata(
 ): Promise<Metadata> {
     const id = params.id;
 
-    const supabase = createClient();
-    const { data } = await supabase
-        .from('food')
-        .select('name')
-        .eq('id', id)
-        .maybeSingle();
+    const name = food.find((p) => p.Id === id)?.Name;
 
-    const title = data?.name ?? 'Food not found';
+    const title = name ?? 'Food not found';
 
     const fallbackDescription = 'Share. Learn. Advance.';
     const description = fallbackDescription;
-    let image = getUrl('food', data?.name ?? 'not found');
+    let image = getUrl('food', name ?? 'not found');
     const parentTwitterSite = (await parent).twitter?.site ?? '';
 
     return {

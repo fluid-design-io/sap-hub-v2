@@ -2,7 +2,6 @@ import { PageHeader } from '@/components/site/page-header';
 import Container from '@/components/ui/container';
 import { getUrl } from '@/lib/get-item-public-url';
 import pets from '@/public/data/pets.json';
-import { createClient } from '@/utils/supabase/client';
 import { Metadata, ResolvingMetadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
@@ -28,10 +27,8 @@ export default async function PetPage({
 }
 
 export async function generateStaticParams() {
-    const supabase = createClient();
-    const { data: pets } = await supabase.from('pets').select('id').limit(1000);
     if (!pets) return [];
-    return pets.map(({ id }) => ({ id }));
+    return pets.map(({ Id: id }) => ({ id }));
 }
 
 type PageProps = {
@@ -44,18 +41,13 @@ export async function generateMetadata(
 ): Promise<Metadata> {
     const id = params.id;
 
-    const supabase = createClient();
-    const { data: pet } = await supabase
-        .from('pets')
-        .select('name')
-        .eq('id', id)
-        .maybeSingle();
+    const name = pets.find((p) => p.Id === id)?.Name;
 
-    const title = pet?.name ?? 'Pet not found';
+    const title = name ?? 'Pet not found';
 
     const fallbackDescription = 'Share. Learn. Advance.';
     const description = fallbackDescription;
-    let image = getUrl('pets', pet?.name ?? 'not found');
+    let image = getUrl('pets', name ?? 'not found');
     const parentTwitterSite = (await parent).twitter?.site ?? '';
 
     return {
