@@ -26,7 +26,7 @@ export const petMismatches = {
     Guineafowl: 'GuineaPig',
     Tree: 'TreeEnt',
     Abomination: 'Shoggoth',
-    Cuttlefish: 'Cuddlefish',
+    Cuttlefish: 'CuddleFish',
     Rootling: 'Rootler',
     Tahr: 'ArabianTahr',
     'Tiger Bug': 'Not found',
@@ -41,7 +41,7 @@ export const petMismatches = {
     'Bird of Paradise': 'ParadiseBird',
     'German Shepherd': 'GermanShepard',
     'Great One': 'Cthulhu',
-    'Hammerhead Shark': 'Hammershark',
+    'Hammerhead Shark': 'HammerShark',
     'Mantis Shrimp': 'ShrimpMantis',
     Warf: 'Warg',
 };

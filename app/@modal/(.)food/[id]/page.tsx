@@ -10,10 +10,7 @@ export default async function FoodModal({
 }: {
     params: { id: string };
 }) {
-    //! Hack to remove `.prefetch` from the params
-    const idPatch = id.replace('.prefetch', '');
-    const data = food.find((p) => p.Id === idPatch);
-    console.log(`===> 🟢 fetching food with id ${id}`, data);
+    const data = food.find((p) => p.Id === id);
     if (!data) return notFound();
     return (
         <Modal title={data.Name} description={`Tier ${data.Tier}`}>
