@@ -2,7 +2,6 @@ import { PageHeader } from '@/components/site/page-header';
 import { Card, CardContent } from '@/components/ui/card';
 import Container from '@/components/ui/container';
 import { promises as fs } from 'fs';
-import React from 'react';
 
 async function UpdatePage() {
     const fileUrl = process.cwd() + '/public/data/rebalance.txt';
@@ -10,11 +9,9 @@ async function UpdatePage() {
     return (
         <Container>
             <PageHeader title="Updates" subtitle="What's new in the game" />
-            <Card className="prose max-w-none">
-                <CardContent>
-                    <pre className="whitespace-pre-wrap font-komika text-card-foreground/90">
-                        {data}
-                    </pre>
+            <Card className="prose max-w-none prose-pre:bg-transparent prose-pre:font-komika prose-pre:text-card-foreground/90">
+                <CardContent className="bg-card">
+                    <pre className="whitespace-pre-wrap">{data}</pre>
                 </CardContent>
             </Card>
         </Container>
