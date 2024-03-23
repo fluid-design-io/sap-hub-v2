@@ -78,7 +78,11 @@ export default function SiteRootLayout({
                 <ThemeProvider>
                     <Header />
                     {children}
-                    {modal}
+
+                    {
+                        //! DUE TO EXPERIMENTAL FEATURES (PPR), THIS CODE IS COMMENTED OUT
+                        // modal
+                    }
                     <SiteBackground />
                     <Footer />
                     <Toaster richColors />
