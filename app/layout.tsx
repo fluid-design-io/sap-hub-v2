@@ -81,6 +81,7 @@ export default function SiteRootLayout({
 
                     {
                         //! DUE TO EXPERIMENTAL FEATURES (PPR), THIS CODE IS COMMENTED OUT
+                        // !TODO: Move `@modal` folder back to `app/` and uncomment this code
                         // modal
                     }
                     <SiteBackground />
