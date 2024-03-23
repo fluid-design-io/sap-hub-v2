@@ -80,7 +80,6 @@ function TutorialForm({ tutorial }: { tutorial: Tables<'tutorials'> }) {
             <Container className="flex flex-1 flex-col-reverse lg:flex-row lg:items-start">
                 <Card className="relative w-full">
                     <CardContent className="min-h-[400px] text-card-foreground">
-                        {JSON.stringify(tutorial, null, 2)}
                         <Editor />
                     </CardContent>
                 </Card>
