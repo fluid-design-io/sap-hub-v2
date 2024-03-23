@@ -5,7 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { getUrl } from '@/lib/get-item-public-url';
 import { cn } from '@/lib/utils';
-import { Tables } from '@/types/database';
+import pets from '@/public/data/pets.json';
 import { createClient } from '@/utils/supabase/client';
 import { Dice1, Dice2, Dice3, Dice4, Dice5, Dice6 } from 'lucide-react';
 import Image from 'next/image';
@@ -22,20 +22,16 @@ const dice = [Dice1, Dice2, Dice3, Dice4, Dice5, Dice6];
 
 async function Detail({ id, imageClassName }: PetDetailProps) {
     const supabase = createClient();
-    const { data: pet } = await supabase
-        .from('pets')
-        .select('*')
-        .eq('id', id)
-        .maybeSingle();
+    const pet = pets.find((p) => p.Id === id);
     if (!pet) return notFound();
     const { data: overview } = await supabase
         .from('overview')
         .select('Archetype, Trigger, Roles')
         .match({
-            Name: pet.name,
+            Name: pet.Name,
         })
         .maybeSingle();
-    const petAbilities = pet.abilities as any;
+    const petAbilities = pet.Abilities;
     const getAbility = (about: string) => {
         const [ability, ...rest] = about.split(':');
         const withAbility = rest.length ? <> &rarr;</> : '';
@@ -64,24 +60,24 @@ async function Detail({ id, imageClassName }: PetDetailProps) {
                     fill="inherit"
                 />
                 <Image
-                    src={getUrl('pets', pet.name)}
-                    alt={pet.name}
+                    src={getUrl('pets', pet.Name)}
+                    alt={pet.Name}
                     width={200}
                     height={200}
                     className="w-full max-w-48 animate-fade-up animate-duration-500"
                 />
             </div>
             <div className="flex w-full items-center justify-center gap-8">
-                <AttackIcon>{pet.attack}</AttackIcon>
-                <HealthIcon>{pet.health}</HealthIcon>
+                <AttackIcon>{pet.Attack}</AttackIcon>
+                <HealthIcon>{pet.Health}</HealthIcon>
             </div>
             <Card className="relative w-full max-w-2xl">
                 <CardContent className="pt-8">
                     {/* Overview */}
                     <div className="absolute -inset-x-3 -top-3 flex items-center justify-between gap-6">
                         {/* Tier Dice */}
-                        {dice[pet.tier - 1] &&
-                            React.createElement(dice[pet.tier - 1], {
+                        {dice[pet.Tier - 1] &&
+                            React.createElement(dice[pet.Tier - 1], {
                                 className:
                                     'bg-white size-8 text-black border-2 border-black rounded-md rotate-[-4.5deg]',
                             })}
@@ -105,9 +101,9 @@ async function Detail({ id, imageClassName }: PetDetailProps) {
                     </div>
                     <ul className="space-y-4">
                         {petAbilities &&
-                            petAbilities.map((ability: any, index: number) => (
+                            petAbilities.map((ability, index: number) => (
                                 <li
-                                    key={`${pet.name}-${index}`}
+                                    key={`${pet.Name}-${index}`}
                                     className="flex items-center gap-2"
                                 >
                                     <div className="text-stroke min-w-12 flex-shrink-0 font-lapsus text-2xl font-bold tracking-[-0.18rem]">

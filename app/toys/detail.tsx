@@ -3,7 +3,7 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { getUrl } from '@/lib/get-item-public-url';
 import { cn } from '@/lib/utils';
-import { Tables } from '@/types/database';
+import toys from '@/public/data/toys.json';
 import { createClient } from '@/utils/supabase/client';
 import { Dice1, Dice2, Dice3, Dice4, Dice5, Dice6 } from 'lucide-react';
 import Image from 'next/image';
@@ -19,20 +19,16 @@ const dice = [Dice1, Dice2, Dice3, Dice4, Dice5, Dice6];
 
 async function Detail({ id, imageClassName }: DetailProps) {
     const supabase = createClient();
-    const { data } = await supabase
-        .from('toys')
-        .select('*')
-        .match({ id })
-        .maybeSingle();
+    const data = toys.find((p) => p.Id === id);
     if (!data) return notFound();
     const { data: overview } = await supabase
         .from('overview')
         .select('Archetype, Trigger, Roles')
         .match({
-            Name: data.name,
+            Name: data.Name,
         })
         .maybeSingle();
-    const abilities = data.abilities as any;
+    const abilities = data.Abilities as any;
     const getAbility = (about: string) => {
         const [ability, ...rest] = about.split(':');
         const withAbility = rest.length ? <> &rarr;</> : '';
@@ -66,8 +62,8 @@ async function Detail({ id, imageClassName }: DetailProps) {
                     fill="inherit"
                 />
                 <Image
-                    src={getUrl('toys', data.name)}
-                    alt={data.name}
+                    src={getUrl('toys', data.Name)}
+                    alt={data.Name}
                     width={200}
                     height={200}
                     className="w-full max-w-48 animate-fade-up animate-duration-500"
@@ -78,8 +74,8 @@ async function Detail({ id, imageClassName }: DetailProps) {
                     {/* Overview */}
                     <div className="absolute -inset-x-3 -top-3 flex items-center justify-between gap-6">
                         {/* Tier Dice */}
-                        {dice[data.tier - 1] &&
-                            React.createElement(dice[data.tier - 1], {
+                        {dice[data.Tier - 1] &&
+                            React.createElement(dice[data.Tier - 1], {
                                 className:
                                     'bg-white size-8 text-black border-2 border-black rounded-md rotate-[-4.5deg]',
                             })}
@@ -99,7 +95,7 @@ async function Detail({ id, imageClassName }: DetailProps) {
                                     {overview.Roles}
                                 </Badge>
                             )}
-                            {getToyType(data?.toy_type)}
+                            {getToyType(data?.ToyType)}
                         </div>
                     </div>
                     <ul className="space-y-4">

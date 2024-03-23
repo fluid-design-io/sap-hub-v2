@@ -1,11 +1,9 @@
-import AttackIcon from '@/components/icon/attack';
 import DotGrid from '@/components/icon/dot-grid';
-import HealthIcon from '@/components/icon/health';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { getUrl } from '@/lib/get-item-public-url';
 import { cn } from '@/lib/utils';
-import { Tables } from '@/types/database';
+import food from '@/public/data/food.json';
 import { createClient } from '@/utils/supabase/client';
 import { Dice1, Dice2, Dice3, Dice4, Dice5, Dice6 } from 'lucide-react';
 import Image from 'next/image';
@@ -21,20 +19,16 @@ const dice = [Dice1, Dice2, Dice3, Dice4, Dice5, Dice6];
 
 async function Detail({ id, imageClassName }: DetailProps) {
     const supabase = createClient();
-    const { data } = await supabase
-        .from('food')
-        .select('*')
-        .eq('id', id)
-        .maybeSingle();
+    const data = food.find((p) => p.Id === id);
     if (!data) return notFound();
     const { data: overview } = await supabase
         .from('overview')
         .select('Archetype, Trigger, Roles, Effect')
         .match({
-            Name: data.name,
+            Name: data.Name,
         })
         .maybeSingle();
-    const ability = data.ability;
+    const ability = data.Ability;
     const getAbility = (about: string) => {
         const [ability, ...rest] = about.split(':');
         const withAbility = rest.length ? <> &rarr;</> : '';
@@ -63,8 +57,8 @@ async function Detail({ id, imageClassName }: DetailProps) {
                     fill="inherit"
                 />
                 <Image
-                    src={getUrl('food', data.name)}
-                    alt={data.name}
+                    src={getUrl('food', data.Name)}
+                    alt={data.Name}
                     width={200}
                     height={200}
                     className="w-full max-w-48 animate-fade-up animate-duration-500"
@@ -75,8 +69,8 @@ async function Detail({ id, imageClassName }: DetailProps) {
                     {/* Overview */}
                     <div className="absolute -inset-x-3 -top-3 flex items-center justify-between gap-6">
                         {/* Tier Dice */}
-                        {dice[data.tier - 1] &&
-                            React.createElement(dice[data.tier - 1], {
+                        {dice[data.Tier - 1] &&
+                            React.createElement(dice[data.Tier - 1], {
                                 className:
                                     'bg-white size-8 text-black border-2 border-black rounded-md rotate-[-4.5deg]',
                             })}
