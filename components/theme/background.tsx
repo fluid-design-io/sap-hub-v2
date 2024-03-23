@@ -16,7 +16,7 @@ const SiteBackground = () => {
     );
     return (
         <div
-            className="absolute left-0 top-0 z-[-1] h-full w-full animate-fade bg-cover bg-center animate-duration-[860ms] sm:bg-contain"
+            className="fixed left-0 top-0 z-[-1] h-full w-full bg-cover bg-center duration-1000 animate-in fade-in sm:bg-contain"
             style={{
                 backgroundColor:
                     backgroundThemes[resolvedTheme as BackgroundTheme].color,
