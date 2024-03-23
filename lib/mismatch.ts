@@ -43,7 +43,7 @@ export const petMismatches = {
     'Great One': 'Cthulhu',
     'Hammerhead Shark': 'HammerShark',
     'Mantis Shrimp': 'ShrimpMantis',
-    'Sting Ray': 'StingRay',
+    'Sting Ray': 'Stingray',
     Warf: 'Warg',
 };
 
