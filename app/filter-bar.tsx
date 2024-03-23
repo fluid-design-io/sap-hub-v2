@@ -1,6 +1,5 @@
 'use client';
 
-import HorizontalOverflowFadeOut from '@/components/site/horizontal-overflow-fadeout';
 import { Button } from '@/components/ui/button';
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 import { createQueryFilter } from '@/lib/search-params';
@@ -35,8 +34,7 @@ function FilterBar({
         [searchParams],
     );
     return (
-        <ScrollArea className="relative max-w-[calc(100%-7.5rem)] whitespace-nowrap">
-            <HorizontalOverflowFadeOut />
+        <ScrollArea className="relative max-w-[calc(100%-7.5rem)] whitespace-nowrap [mask-image:linear-gradient(to_right,transparent_0,black_2rem,black_calc(100%-2rem),transparent)]">
             <div className="flex justify-center space-x-4 p-6">
                 {filters.map((filter) => (
                     <Button
