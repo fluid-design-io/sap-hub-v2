@@ -41,7 +41,7 @@ export const petMismatches = {
     'Bird of Paradise': 'ParadiseBird',
     'German Shepherd': 'GermanShepard',
     'Great One': 'Cthulhu',
-    'Hammerhead Shark': 'HammerShark',
+    'Hammerhead Shark': 'Hammershark',
     'Mantis Shrimp': 'ShrimpMantis',
     'Sting Ray': 'Stingray',
     Warf: 'Warg',
