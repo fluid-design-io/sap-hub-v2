@@ -4,12 +4,12 @@ import { Button } from '@/components/ui/button';
 import { DialogTitle } from '@/components/ui/dialog';
 import withUser from '@/hooks/with-user/client';
 import { getUrl } from '@/lib/get-item-public-url';
+import { cn } from '@/lib/utils';
 import { User } from '@/types/types';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { ClipboardIcon, Loader2, PlusIcon } from 'lucide-react';
+import { PlusIcon } from 'lucide-react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import Modal from '../modal';
 import EditorForm, { PackEditorForm } from './editor-form';
@@ -18,10 +18,12 @@ function PackEditor({
     defaultValues,
     user,
     id,
+    ...props
 }: {
     defaultValues?: PackEditorForm;
     user: User;
     id?: string;
+    className?: string;
 }) {
     const [open, setOpen] = useState(false);
     const router = useRouter();
@@ -42,7 +44,7 @@ function PackEditor({
         setOpen(true);
     };
     return (
-        <div className="flex-shrink-0 pr-6">
+        <div className={cn('flex-shrink-0 pr-6', props?.className)}>
             <Button onClick={handleOpenModal}>
                 {isEdit ? 'Edit' : 'Create'}
                 <span className="hidden md:inline-block md:pl-1">Pack</span>
