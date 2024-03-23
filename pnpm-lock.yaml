@@ -195,9 +195,6 @@ devDependencies:
   prettier-plugin-tailwindcss:
     specifier: ^0.5.12
     version: 0.5.12(@trivago/prettier-plugin-sort-imports@4.3.0)(prettier@3.2.5)
-  tailwindcss-animated:
-    specifier: ^1.0.1
-    version: 1.0.1(tailwindcss@3.4.1)
 
 packages:
 
@@ -4711,14 +4708,6 @@ packages:
     dependencies:
       tailwindcss: 3.4.1
     dev: false
-
-  /tailwindcss-animated@1.0.1(tailwindcss@3.4.1):
-    resolution: {integrity: sha512-u5wusj89ZwP8I+s8WZlaAd7aZTWBN/XEG6QgMKpkIKmAf3xP1A6WYf7oYIKmGaB10UAQaSqWopi/i1ozzZEs8Q==}
-    peerDependencies:
-      tailwindcss: '>=3.1.0'
-    dependencies:
-      tailwindcss: 3.4.1
-    dev: true
 
   /tailwindcss@3.4.1:
     resolution: {integrity: sha512-qAYmXRfk3ENzuPBakNK0SRrUDipP8NQnEY6772uDhflcQz5EhRdD7JNZxyrFHVQNCwULPBn6FNPp9brpO7ctcA==}
