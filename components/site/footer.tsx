@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import React from 'react';
 
 import { Button } from '@ui/button';
 
@@ -32,7 +31,7 @@ export const Footer = () => {
                             asChild
                         >
                             <Link
-                                href="https://github.com/fluid-design-io/SAP-hub"
+                                href="https://github.com/fluid-design-io/SAP-hub-v2"
                                 target="_blank"
                                 rel="noreferrer"
                             >
