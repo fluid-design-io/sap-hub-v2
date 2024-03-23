@@ -53,7 +53,7 @@ export const foodMismatches = {
     'Better Apple': 'Apple2',
     'Better Milk': 'Milk2',
     Blueberry: 'BlueBerries',
-    Peach: 'Peach',
+    Peach: 'Plumb',
     'Water of Youth': 'YouthWater',
     Cherry: 'Cherries',
     Cupcake: 'Not found',
