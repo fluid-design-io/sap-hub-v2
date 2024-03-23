@@ -22,7 +22,7 @@ export const getUrl = (type: ItemType, name: string | number) => {
         if (minion) {
             itemName = minion.Name;
         } else {
-            itemName = 'Notfound';
+            itemName = 'Not Found';
         }
     } else {
         itemName = name;
